@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asesoría Synthos</title>
+<meta name="description" content="Asesoría de entrenamiento 1:1 durante 3 meses con Synthos: qué músculo entrenar, cuánto volumen y cómo progresar, con estudios citados.">
+<meta name="theme-color" content="#04050d">
+<script>document.documentElement.classList.add("fw")</script>
+<meta property="og:title" content="Synthos · Asesoría 1:1 de 3 meses">
+<meta property="og:description" content="Deja de adivinar tu entrenamiento. Plan basado en ciencia con la app Synthos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&family=Unbounded:wght@500..900&display=swap">
+<style>
+:root{
+  --bg:#04050d;--bg2:#070815;--sf:#0b0d1f;--sf2:#10132b;
+  --ink:#eef0ff;--mute:#8b90b3;--dim:#7d82a8;--line:rgba(200,205,255,.1);--edge:rgba(200,205,255,.14);
+  --acc:#5468ff;--acc-l:#8e9bff;--acc-d:#3443e6;--ion:#3fd8ff;--gold:#ffc94a;
+  --disp:"Unbounded","Bricolage Grotesque",system-ui,sans-serif;--body:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;--mono:"Geist Mono",ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);--spring:cubic-bezier(.34,1.56,.64,1);
+  --pad:clamp(20px,5vw,72px);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:rgba(84,104,255,.45);color:#fff}
+a{color:inherit;text-decoration:none}
+img,video,canvas,svg{display:block;max-width:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--acc-l);outline-offset:3px;border-radius:8px}
+em{font-style:normal}
+.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0;background:linear-gradient(100deg,#c4cbff 10%,#8e9bff 45%,var(--ion));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.lab{font:500 .72rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--acc-l)}
+.wrap{width:min(1240px,100%);margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:700;letter-spacing:-.035em;line-height:1}
+p{margin:0}
+
+/* ---------- navegación ---------- */
+.nav{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:50;width:min(1180px,calc(100% - 24px));display:flex;align-items:center;gap:18px;padding:9px 9px 9px 18px;border-radius:999px;background:rgba(9,11,26,.55);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 18px 40px -20px rgba(0,0,0,.8);transition:background .4s,border-color .4s}
+.nav.solid{background:rgba(7,8,21,.82);border-color:var(--edge)}
+.brand{display:flex;align-items:center;gap:10px;font:800 .82rem var(--disp);letter-spacing:.24em}
+.brand svg{width:24px;height:24px;filter:drop-shadow(0 0 8px rgba(84,104,255,.6))}
+.nav .links{display:flex;gap:4px;margin-left:auto}
+.nav .links a{padding:8px 14px;border-radius:999px;color:var(--mute);font:500 .9rem var(--body);transition:color .25s,background .25s}
+.nav .links a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;border:0;cursor:pointer;font:600 1rem var(--body);color:#fff;background:linear-gradient(180deg,#7486ff,var(--acc) 55%,var(--acc-d));box-shadow:inset 0 1px 0 rgba(255,255,255,.32),inset 0 -2px 0 rgba(0,0,0,.2),0 14px 34px -12px rgba(84,104,255,.95);overflow:hidden;transition:transform .4s var(--spring),box-shadow .3s;white-space:nowrap}
+.btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.32),transparent);transform:skewX(-18deg);transition:left .8s var(--ease)}
+.btn:hover{transform:translateY(-2px)}.btn:hover::after{left:130%}.btn:active{transform:scale(.96)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn.sm{height:42px;padding:0 18px;font-size:.92rem}
+.btn.ghost{background:rgba(255,255,255,.04);color:var(--ink);box-shadow:inset 0 0 0 1px var(--edge)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.btn .m{display:none}
+.nav .btn{margin-left:auto}.nav .links+.btn{margin-left:6px}
+
+/* ---------- portada ---------- */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;isolation:isolate}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:-2;opacity:0;transition:opacity 1s var(--ease)}
+.hero-fallback{position:absolute;inset:0;z-index:-2;background:radial-gradient(42% 52% at var(--fx,80%) var(--fy,48%),rgba(84,104,255,.38),transparent 70%),var(--bg);transition:opacity 1.1s var(--ease)}
+.gl-on #gl{opacity:1}.gl-on .hero-fallback{opacity:0}
+.nogl #gl{display:none}.nogl .hero-fallback{opacity:1}
+.hero-fallback svg{--z:min(59.4vh,29.5vw);position:absolute;width:var(--z);height:var(--z);left:calc(81% - var(--z) / 2);top:calc(50% - var(--z) / 2);filter:drop-shadow(0 0 40px rgba(84,104,255,.6));animation:fbFloat 7s ease-in-out infinite}
+@keyframes fbFloat{50%{transform:translateY(-10px) rotate(-2deg)}}
+@media (max-width:900px){.hero-fallback svg{--z:min(54vw,250px);left:calc(50% - var(--z) / 2);top:calc(30% - var(--z) / 2)}}
+.fw .hero-copy{visibility:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:34%;z-index:-1;background:linear-gradient(rgba(4,5,13,0),var(--bg));pointer-events:none}
+.hero-copy{position:absolute;left:0;right:0;top:50%;transform:translateY(-46%)}
+.hero-copy .wrap{display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.hero h1{font-size:clamp(2.05rem,5.6vw,5rem);font-weight:700;max-width:12.5ch}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .line>span{display:inline-block}
+.hero h1 .it{font-size:1.14em;line-height:.8}
+.hero .sub{max-width:44ch;color:#b4b8d6;font-size:clamp(1rem,1.25vw,1.15rem)}
+.hero .sub b{color:var(--ink);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:10px 22px;font:500 .74rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.proof span{display:flex;align-items:center;gap:8px}.proof i{width:6px;height:6px;border-radius:2px;transform:rotate(45deg);background:var(--acc-l);box-shadow:0 0 10px var(--acc)}
+.cue{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:1px;height:46px;background:linear-gradient(var(--acc-l),transparent);overflow:hidden}
+.cue::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:#fff;animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+
+/* ---------- manifiesto (texto que se enciende con el scroll) ---------- */
+.manifesto{position:relative;height:230vh}
+.manifesto .stick{position:sticky;top:0;height:100svh;display:grid;place-items:center}
+.manifesto p{font:600 clamp(1.55rem,3.7vw,3.6rem)/1.2 var(--body);letter-spacing:-.025em;max-width:29ch;text-wrap:balance}
+.manifesto .w{opacity:.4;transition:opacity .2s linear}
+.manifesto .it{font-size:1.12em}
+.manifesto .lab{display:block;margin-bottom:28px}
+
+/* ---------- la app: recorrido con móvil fijo ---------- */
+.app-head{padding-block:16vh 4vh;text-align:center}
+.app-head .lab{display:block;margin-bottom:22px}
+.app-head h2{font-size:clamp(1.9rem,4.6vw,4.2rem);max-width:17ch;margin:0 auto;text-wrap:balance}
+.app-head h2 .it{font-size:1.12em}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:4vw;position:relative}
+.steps{padding:10vh 0 20vh}
+.step{min-height:88vh;display:flex;flex-direction:column;justify-content:center;gap:18px;max-width:30rem}
+.step h3,.step p,.step .lab{transition:opacity .6s var(--ease)}
+.step:not(.on) h3{opacity:.45}.step:not(.on) p,.step:not(.on) .lab{opacity:.75}
+.step .lab{display:flex;align-items:center;gap:12px}
+.step .lab::after{content:"";width:48px;height:1px;background:linear-gradient(90deg,var(--acc-l),transparent)}
+.step h3{font-size:clamp(1.6rem,2.8vw,2.6rem);font-weight:700;letter-spacing:-.03em;line-height:1.05;text-wrap:balance}
+.step p{color:#aeb3d3;font-size:1.08rem;max-width:36ch}
+.step small{font:500 .74rem var(--mono);color:var(--dim);letter-spacing:.06em}
+.phone-col{position:sticky;top:0;height:100svh;display:grid;place-items:center}
+.phone{position:relative;width:clamp(250px,24vw,330px);aspect-ratio:390/844;border-radius:46px;padding:9px;background:linear-gradient(160deg,#262b55,#0c0e22 40%,#151938);box-shadow:inset 0 0 0 1px rgba(210,215,255,.18),inset 0 1px 0 rgba(255,255,255,.2),0 50px 90px -40px rgba(0,0,0,.95),0 0 140px -30px rgba(84,104,255,.55)}
+.phone .scr{position:relative;width:100%;height:100%;border-radius:38px;overflow:hidden;background:#05060f;transform:translateZ(0)}
+.phone video,.phone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s var(--ease)}
+.phone .on{opacity:1}
+.phone::before{content:"";position:absolute;left:50%;top:18px;width:30%;height:22px;margin-left:-15%;border-radius:20px;background:#000;z-index:2}
+.glow-ring{position:absolute;inset:-18% -30%;z-index:-1;background:radial-gradient(closest-side,rgba(84,104,255,.32),transparent 70%);filter:blur(10px)}
+.dots{position:absolute;right:max(10px,calc(50% - 250px));top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--dim);transition:all .5s var(--ease)}
+.dots i.on{height:26px;border-radius:4px;background:var(--acc-l);box-shadow:0 0 12px var(--acc)}
+.step .phone.mini{display:none}
+
+/* ---------- cifras ---------- */
+.nums{padding-block:14vh 10vh}
+.nums .grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.num{padding:34px 22px 10px 0;border-right:1px solid var(--line)}
+.num:last-child{border-right:0}
+.num b{display:block;font:800 clamp(3rem,7vw,6.2rem)/1 var(--disp);letter-spacing:-.05em;background:linear-gradient(180deg,#fff 20%,#9aa5ff);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.num b sup{font-size:.36em;vertical-align:top;margin-left:4px;letter-spacing:0;background:inherit;-webkit-background-clip:text;background-clip:text}
+.num span{display:block;margin-top:14px;color:var(--mute);font-size:.98rem;max-width:18ch}
+.num + .num{padding-left:22px}
+
+/* ---------- ciencia ---------- */
+.sci{padding-block:12vh}
+.sci-head{display:grid;grid-template-columns:1.1fr 1fr;gap:5vw;align-items:end;margin-bottom:6vh}
+.sci h2{font-size:clamp(1.9rem,4.4vw,4rem);text-wrap:balance}.sci h2 .it{font-size:1.12em}
+.sci-head p{color:var(--mute);max-width:38ch}
+.refs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ref{display:grid;grid-template-columns:220px 1fr auto;gap:28px;align-items:baseline;padding:26px 6px;border-bottom:1px solid var(--line);transition:background .35s}
+.ref:hover{background:linear-gradient(90deg,rgba(84,104,255,.07),transparent 70%)}
+.ref h3{font:700 1.08rem var(--disp);letter-spacing:-.02em}
+.ref p{color:#a6abcb;font-size:.95rem}
+.ref cite{font:500 .78rem var(--mono);color:var(--dim);font-style:normal;white-space:nowrap}
+
+/* ---------- proceso ---------- */
+.proc{padding-block:12vh}
+.proc h2{font-size:clamp(1.9rem,4.4vw,4rem);max-width:16ch;margin-bottom:8vh;text-wrap:balance}.proc h2 .it{font-size:1.12em}
+.plist{position:relative}.proc ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proc .rail{position:absolute;left:0;right:0;top:27px;height:1px;background:var(--line)}
+.proc .rail b{position:absolute;inset:0;background:linear-gradient(90deg,var(--acc),var(--ion));transform-origin:left;transform:scaleX(var(--p,0));box-shadow:0 0 12px var(--acc)}
+.proc li{position:relative;padding-top:78px}
+.proc li .n{position:absolute;top:0;left:0;width:54px;height:54px;display:grid;place-items:center;font:600 .9rem var(--mono);color:#fff;background:var(--sf);border:1px solid var(--edge);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.proc li .n::before{content:"";position:absolute;inset:1px;background:linear-gradient(180deg,#1a1f45,#0b0d20);clip-path:inherit;z-index:-1}
+.proc li h3{font-size:1.3rem;letter-spacing:-.02em;margin-bottom:12px;line-height:1.15}
+.proc li p{color:#a6abcb;max-width:30ch}
+.proc li p a{color:var(--ink);border-bottom:1px solid var(--acc-l)}
+
+/* ---------- llamada final ---------- */
+.final{position:relative;padding:18vh 0 16vh;text-align:center;overflow:hidden;isolation:isolate}
+.final::before{content:"";position:absolute;left:50%;top:44%;width:min(900px,140vw);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;background:radial-gradient(closest-side,rgba(84,104,255,.3),rgba(63,216,255,.06) 55%,transparent 72%)}
+.final svg.mark{width:96px;margin:0 auto 40px;filter:drop-shadow(0 0 24px rgba(84,104,255,.7))}
+.final h2{font-size:clamp(2rem,5.4vw,4.8rem);max-width:15ch;margin:0 auto 22px;text-wrap:balance}.final h2 .it{font-size:1.12em}
+.final p{color:var(--mute);max-width:40ch;margin:0 auto 36px}
+.final .btn{height:60px;padding:0 34px;font-size:1.08rem}
+.app-cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:30px}.app-cta span{font:500 .78rem var(--mono);letter-spacing:.06em;color:var(--mute)}
+.dl-link{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:10px 18px;border-radius:999px;color:var(--ink);font-weight:600;box-shadow:inset 0 0 0 1px var(--edge);background:rgba(255,255,255,.04);transition:background .25s}.dl-link:hover{background:rgba(255,255,255,.08)}.dl-link svg{width:18px;height:18px}
+.final .handle{display:block;margin-top:18px;font:500 .82rem var(--mono);color:var(--mute);letter-spacing:.06em}
+footer{border-top:1px solid var(--line);padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));color:var(--dim);font-size:.84rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer p{max-width:62ch}
+footer .legal{display:flex;gap:18px;flex-wrap:wrap}footer .legal a{color:var(--mute);border-bottom:1px solid transparent;transition:border-color .2s}footer .legal a:hover{border-color:var(--mute)}
+
+/* ---------- aparición al entrar en pantalla ---------- */
+.rv{transform:translateY(26px);transition:transform 1.1s var(--ease)}
+.rv.in{transform:none}
+
+/* ---------- móvil ---------- */
+@media (max-width:900px){
+  .nav .links{display:none}
+  .hero{min-height:700px}
+  .hero-copy{top:auto;bottom:calc(34px + env(safe-area-inset-bottom,0px));transform:none}
+  .hero-copy .wrap{gap:18px}
+  .cta-row{flex-wrap:nowrap;gap:10px}.cta-row .btn{height:48px;padding:0 17px;font-size:.94rem}.btn .d{display:none}.btn .m{display:inline}
+  .proof span:nth-child(3){display:none}
+  .hero .sub{font-size:1rem}
+  .proof{font-size:.66rem;gap:8px 16px}
+  .cue{display:none}
+  .story{display:block}
+  .phone-col,.dots{display:none}
+  .steps{padding:4vh 0 6vh}
+  .step{min-height:0;opacity:1;padding:7vh 0;max-width:none;align-items:flex-start}
+  .step .phone.mini{display:block;width:min(74vw,300px);margin:18px auto 0;align-self:center}
+  .step .phone.mini video{opacity:1}
+  .nums .grid{grid-template-columns:1fr 1fr}
+  .num{padding:26px 14px 22px 0;border-bottom:1px solid var(--line)}
+  .num:nth-child(2n){border-right:0;padding-left:16px}.num:nth-child(2n+1){padding-left:0}
+  .sci-head{grid-template-columns:1fr;gap:18px}
+  .ref{grid-template-columns:1fr;gap:6px;padding:22px 2px}
+  .ref cite{white-space:normal}
+  .proc ol{grid-template-columns:1fr;gap:42px}
+  .proc .rail{left:27px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .proc .rail b{transform-origin:top;transform:scaleY(var(--p,0))}
+  .proc li{padding:0 0 0 80px}
+  .proc li .n{top:-6px}
+  .final .btn{height:auto;min-height:56px;padding:14px 20px;font-size:1rem;white-space:normal;max-width:100%;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .manifesto .w,.rv{opacity:1;transform:none}
+}
+</style>
+<link rel="canonical" href="https://paraderodimicua.github.io/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Synthos"><meta property="og:locale" content="es_PE"><meta property="og:url" content="https://paraderodimicua.github.io/">
+
+<meta property="og:image" content="https://paraderodimicua.github.io/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Synthos: deja de adivinar tu entrenamiento">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Synthos · Asesoría 1:1 de 3 meses"><meta name="twitter:description" content="Deja de adivinar tu entrenamiento. Plan basado en ciencia con la app Synthos."><meta name="twitter:image" content="https://paraderodimicua.github.io/og.jpg">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="mg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dfe3ff"/><stop offset=".45" stop-color="#7a8bff"/><stop offset="1" stop-color="#3fd8ff"/></linearGradient>
+    <linearGradient id="mg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5468ff" stop-opacity=".38"/><stop offset="1" stop-color="#0b0d22" stop-opacity=".05"/></linearGradient>
+    <symbol id="mark" viewBox="0 0 100 100"><path d="M50 6 L88 28 V72 L50 94 L12 72 V28 Z" fill="url(#mg2)"/><path d="M50 6 L88 28 V72 L50 94 L12 72 V28 Z" fill="none" stroke="url(#mg1)" stroke-width="3" stroke-linejoin="round"/><path d="M63 36 C63 29 37 29 37 40 C37 52 63 48 63 60 C63 71 37 71 37 63" fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round"/></symbol>
+    <symbol id="dl" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Synthos, inicio"><svg aria-hidden="true"><use href="#mark"/></svg>SYNTHOS</a>
+  <nav class="links" aria-label="Secciones"><a href="#app">La app</a><a href="#ciencia">Ciencia</a><a href="#proceso">Cómo empezar</a><a href="descargar/">Descargar app</a></nav>
+  <a class="btn sm" data-ig href="#">Quiero mi asesoría</a>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Asesoría 1:1 con Synthos">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="hero-fallback" aria-hidden="true"><svg><use href="#mark"/></svg></div>
+    <div class="hero-copy">
+      <div class="wrap">
+        <p class="lab h-in">Asesoría 1:1 · 3 meses</p>
+        <h1><span class="line"><span>Deja de</span></span><span class="line"><span><em class="it">adivinar</em> tu</span></span><span class="line"><span>entrenamiento.</span></span></h1>
+        <p class="sub h-in">Durante 3 meses trabajamos tu plan con <b>Synthos</b>, la app que te dice qué músculo entrenar, cuánto volumen hacer y cómo progresar. Y se ajusta con tus datos.</p>
+        <div class="cta-row h-in">
+          <a class="btn" data-ig href="#"><svg aria-hidden="true"><use href="#ig"/></svg>Quiero mi asesoría</a>
+          <a class="btn ghost" href="descargar/"><svg aria-hidden="true"><use href="#dl"/></svg><span class="d">Descargar la app</span><span class="m">Descargar</span></a>
+        </div>
+        <div class="proof h-in" aria-label="Datos de la app"><span><i></i>18 músculos cubiertos</span><span><i></i>Sesiones de 90 min máx.</span><span><i></i>Estudios citados</span></div>
+      </div>
+    </div>
+    <div class="cue" aria-hidden="true"></div>
+  </section>
+<script>/* coloca el emblema plano donde aparecerá el 3D, antes de pintar (evita saltos) */
+window.__placeFB=function(){var hero=document.querySelector('.hero'),fb=hero&&hero.querySelector('.hero-fallback'),s=fb&&fb.querySelector('svg');if(!s)return;var W=hero.clientWidth,H=hero.clientHeight,vh=2*Math.tan(16*Math.PI/180)*7,px=H/vh,cx,cy,r;
+if(W>=900){cx=W*.81;cy=H/2-.02*px;r=Math.min(1.05,vh*W/H*.13)*px}else{var hr=hero.getBoundingClientRect(),cr=hero.querySelector('.hero-copy').getBoundingClientRect(),nb=document.getElementById('nav').getBoundingClientRect().bottom-hr.top,top=cr.top-hr.top;cx=W/2;cy=(nb+top)/2;r=Math.max(60,Math.min(120,(top-nb)/2-14))}
+var z=r*2.2727;s.style.width=s.style.height=z+'px';s.style.left=(cx-z/2)+'px';s.style.top=(cy-z/2)+'px';fb.style.setProperty('--fx',(cx/W*100)+'%');fb.style.setProperty('--fy',(cy/H*100)+'%')};
+window.__placeFB();addEventListener('resize',window.__placeFB);</script>
+
+
+  <section class="manifesto" aria-label="Por qué Synthos">
+    <div class="stick">
+      <div class="wrap">
+        <span class="lab">El problema</span>
+        <p class="reveal">La mayoría entrena por <em class="it">intuición:</em> repite la misma rutina, adivina las cargas y no sabe si progresa. Aquí cada serie tiene un <em class="it">porqué:</em> cuánto volumen necesita cada músculo, cuándo se estima que está recuperado y cuándo toca subir el peso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="app" aria-label="La app Synthos">
+    <div class="wrap app-head rv">
+      <span class="lab">La app incluida</span>
+      <h2>Qué entrenar, <em class="it">cuánto</em> y cómo. En tu bolsillo.</h2>
+      <div class="app-cta"><a class="btn" href="descargar/"><svg aria-hidden="true"><use href="#dl"/></svg>Descargar la app</a><span>Android · en iPhone, como app web</span></div>
+    </div>
+    <div class="wrap story">
+      <div class="steps">
+        <article class="step" data-i="0">
+          <span class="lab">Cuerpo</span>
+          <h3>Tu cuerpo, músculo por músculo.</h3>
+          <p>Un avatar 3D muestra la recuperación estimada, el volumen de la semana y tus prioridades. Tocas un músculo y ves cómo está.</p>
+          <small>La recuperación es una estimación del modelo, no una medición.</small>
+          <div class="phone mini"><div class="scr"><video muted loop playsinline preload="none" poster="assets/clips/cuerpo.webp" src="assets/clips/cuerpo.mp4" aria-label="Video de la app: avatar 3D con la recuperación estimada de cada músculo"></video></div></div>
+        </article>
+        <article class="step" data-i="1">
+          <span class="lab">Plan</span>
+          <h3>Un mesociclo que no se olvida de ningún músculo.</h3>
+          <p>Los 18 músculos con su objetivo semanal de series, y sesiones de 90 minutos como máximo.</p>
+          <div class="phone mini"><div class="scr"><video muted loop playsinline preload="none" poster="assets/clips/plan.webp" src="assets/clips/plan.mp4" aria-label="Video de la app: tabla con los 18 músculos cumpliendo su objetivo semanal"></video></div></div>
+        </article>
+        <article class="step" data-i="2">
+          <span class="lab">Sesión</span>
+          <h3>Tu primera serie ajusta las demás.</h3>
+          <p>Anotas peso, repeticiones y RIR. La app te dice si mantener o ajustar la carga y detecta tus récords al instante.</p>
+          <div class="phone mini"><div class="scr"><video muted loop playsinline preload="none" poster="assets/clips/sesion.webp" src="assets/clips/sesion.mp4" aria-label="Video de la app: registro de una serie y aviso de récord"></video></div></div>
+        </article>
+        <article class="step" data-i="3">
+          <span class="lab">Progreso</span>
+          <h3>Progreso que se ve, no que se supone.</h3>
+          <p>Copas por series efectivas, arenas que desbloqueas y la respuesta de cada ejercicio en ti.</p>
+          <div class="phone mini"><div class="scr"><video muted loop playsinline preload="none" poster="assets/clips/stats.webp" src="assets/clips/stats.mp4" aria-label="Video de la app: copas y arenas de progreso"></video></div></div>
+        </article>
+      </div>
+      <div class="phone-col" aria-hidden="true">
+        <div class="phone" id="phone">
+          <div class="glow-ring"></div>
+          <div class="scr">
+            <video class="on" muted loop playsinline preload="metadata" poster="assets/clips/cuerpo.webp" data-src="assets/clips/cuerpo.mp4"></video>
+            <video muted loop playsinline preload="none" poster="assets/clips/plan.webp" data-src="assets/clips/plan.mp4"></video>
+            <video muted loop playsinline preload="none" poster="assets/clips/sesion.webp" data-src="assets/clips/sesion.mp4"></video>
+            <video muted loop playsinline preload="none" poster="assets/clips/stats.webp" data-src="assets/clips/stats.mp4"></video>
+          </div>
+        </div>
+        <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nums wrap" aria-label="Synthos en cifras">
+    <div class="grid">
+      <div class="num rv"><b data-count="18">18</b><span>músculos cubiertos por tu plan</span></div>
+      <div class="num rv"><b data-count="90">90</b><span>minutos máximo por sesión</span></div>
+      <div class="num rv"><b data-count="100">100</b><span>ejercicios en la biblioteca</span></div>
+      <div class="num rv"><b data-count="3">3</b><span>meses de asesoría 1:1</span></div>
+    </div>
+  </section>
+
+  <section class="sci wrap" id="ciencia" aria-label="Base científica">
+    <div class="sci-head">
+      <h2 class="rv">Con estudios, <em class="it">no</em> con opiniones.</h2>
+      <p class="rv">Las decisiones del plan salen de revisiones y metaanálisis. Dentro de la app, cada recomendación muestra su fuente.</p>
+    </div>
+    <ul class="refs">
+      <li class="ref rv"><h3>Volumen semanal</h3><p>Más series semanales por músculo se asocian a más hipertrofia, de forma graduada.</p><cite>Schoenfeld, Ogborn y Krieger · J Sports Sci · 2017</cite></li>
+      <li class="ref rv"><h3>Frecuencia</h3><p>Entrenar cada músculo al menos dos veces por semana.</p><cite>Schoenfeld, Ogborn y Krieger · Sports Med · 2016</cite></li>
+      <li class="ref rv"><h3>Descanso entre series</h3><p>Descansos más largos favorecieron la fuerza y la hipertrofia en entrenados.</p><cite>Schoenfeld et al. · J Strength Cond Res · 2016</cite></li>
+      <li class="ref rv"><h3>Proteína</h3><p>Cuánta proteína aprovechar y cómo repartirla en el día.</p><cite>Schoenfeld y Aragon · J Int Soc Sports Nutr · 2018</cite></li>
+    </ul>
+  </section>
+
+  <section class="proc wrap" id="proceso" aria-label="Cómo empezar">
+    <h2 class="rv">Empezar es <em class="it">un</em> mensaje.</h2>
+    <div class="plist"><div class="rail" aria-hidden="true"><b></b></div>
+    <ol>
+      <li class="rv"><span class="n">01</span><h3>Escríbeme «SYNTHOS»</h3><p>Por mensaje directo a <a data-ig data-ig-handle href="#">@synthosbased</a> en Instagram.</p></li>
+      <li class="rv"><span class="n">02</span><h3>Armamos tu plan</h3><p>Según tu nivel, los días que tienes y los músculos que quieres priorizar.</p></li>
+      <li class="rv"><span class="n">03</span><h3>Entrenas y ajustamos</h3><p>Registras en Synthos y el plan se ajusta con tus datos durante los 3 meses.</p></li>
+    </ol></div>
+  </section>
+
+  <section class="final" aria-label="Pide tu asesoría">
+    <div class="wrap">
+      <svg class="mark rv" aria-hidden="true"><use href="#mark"/></svg>
+      <h2 class="rv">Tu próximo mesociclo <em class="it">empieza</em> aquí.</h2>
+      <p class="rv">Asesoría 1:1 de 3 meses con la app Synthos incluida.</p>
+      <a class="btn rv" data-ig href="#"><svg aria-hidden="true"><use href="#ig"/></svg>Escribir «SYNTHOS» por Instagram</a>
+      <span class="handle rv" data-ig-handle>@synthosbased</span>
+      <a class="dl-link rv" href="descargar/"><svg aria-hidden="true"><use href="#dl"/></svg>¿Ya eres cliente? Descarga la app</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand"><svg aria-hidden="true"><use href="#mark"/></svg>SYNTHOS</span>
+    <p>La recuperación y la proyección del avatar son estimaciones del modelo de la app, no mediciones. Synthos no sustituye una valoración médica.</p>
+    <nav class="legal" aria-label="Legal"><a href="descargar/">Descargar app</a><a href="privacidad/">Privacidad</a><a href="terminos/">Términos</a><a href="#" data-cookies hidden>Cookies</a><span>© 2026 Synthos</span></nav>
+  </div>
+</footer>
+
+<script>
+/* ===== Ajuste: tu usuario de Instagram (sin @). Todos los botones apuntan aquí. ===== */
+const IG_USER = 'synthosbased';
+(function(){
+  const dm = 'https://ig.me/m/' + IG_USER;
+  document.querySelectorAll('[data-ig]').forEach(a => { a.href = dm; a.target = '_blank'; a.rel = 'noopener'; });
+  document.querySelectorAll('[data-ig-handle]').forEach(e => { e.textContent = '@' + IG_USER; });
+})();
+</script>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+/* ===== Portada: emblema de vidrio en 3D con haz de luz. Si WebGL no está, se ve el emblema en SVG. ===== */
+const rm = matchMedia('(prefers-reduced-motion: reduce)').matches, mob = matchMedia('(max-width: 900px), (pointer: coarse)').matches;
+try {
+  // teléfonos de gama baja o con ahorro de datos: se quedan con el emblema plano (carga rápida)
+  const nc = navigator.connection, low = (nc && nc.saveData) || (navigator.deviceMemory && navigator.deviceMemory < 4) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4);
+  if (low) throw new Error('gama baja');
+  // el 3D arranca cuando la página ya se mostró: primero se ve el emblema plano y luego se funde al 3D
+  await new Promise((r) => { const go = () => (window.requestIdleCallback ? requestIdleCallback(r, { timeout: 1200 }) : setTimeout(r, 300)); document.readyState === 'complete' ? go() : addEventListener('load', go, { once: true }); });
+  const THREE = await import('three');
+  const { RoomEnvironment } = await import('three/addons/environments/RoomEnvironment.js');
+  const cv = document.getElementById('gl'), hero = document.querySelector('.hero');
+  const rd = new THREE.WebGLRenderer({ canvas: cv, antialias: true, powerPreference: 'high-performance' });
+    rd.toneMapping = THREE.ACESFilmicToneMapping; rd.toneMappingExposure = 1.05; rd.outputColorSpace = THREE.SRGBColorSpace;
+  const sc = new THREE.Scene(); sc.background = new THREE.Color('#04050d');
+  const pm = new THREE.PMREMGenerator(rd); sc.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+  const cam = new THREE.PerspectiveCamera(32, 1, .1, 100); cam.position.set(0, 0, 7);
+
+  // fondo: resplandor + haz de luz con extremos y bordes difuminados; los bordes del plano se funden con la página
+  const bgTex = (() => { const S = 2048, c = document.createElement('canvas'); c.width = c.height = S; const x = c.getContext('2d');
+    x.fillStyle = '#04050d'; x.fillRect(0, 0, S, S);
+    const cx = S * .5, cy = S * .49;
+    let g = x.createRadialGradient(cx, cy, 0, cx, cy, S * .3); g.addColorStop(0, 'rgba(84,104,255,.58)'); g.addColorStop(.35, 'rgba(64,76,200,.24)'); g.addColorStop(.7, 'rgba(40,46,140,.07)'); g.addColorStop(1, 'rgba(4,5,13,0)'); x.fillStyle = g; x.fillRect(0, 0, S, S);
+    const bc = document.createElement('canvas'); bc.width = bc.height = S; const y = bc.getContext('2d');
+    y.translate(S * .3, -S * .02); y.rotate(-.5);
+    const L = S * 1.25, W = S * .2;
+    const ac = y.createLinearGradient(-W / 2, 0, W / 2, 0); ac.addColorStop(0, 'rgba(150,168,255,0)'); ac.addColorStop(.5, 'rgba(165,180,255,.34)'); ac.addColorStop(1, 'rgba(150,168,255,0)');
+    y.fillStyle = ac; y.fillRect(-W / 2, 0, W, L);
+    y.globalCompositeOperation = 'destination-in';
+    const al = y.createLinearGradient(0, 0, 0, L); al.addColorStop(0, 'rgba(0,0,0,0)'); al.addColorStop(.2, 'rgba(0,0,0,1)'); al.addColorStop(.55, 'rgba(0,0,0,.65)'); al.addColorStop(1, 'rgba(0,0,0,0)');
+    y.fillStyle = al; y.fillRect(-W / 2, 0, W, L);
+    x.save(); x.filter = 'blur(30px)'; x.drawImage(bc, 0, 0); x.restore();
+    g = x.createRadialGradient(S * .74, S * .76, 0, S * .74, S * .76, S * .28); g.addColorStop(0, 'rgba(63,216,255,.13)'); g.addColorStop(1, 'rgba(4,5,13,0)'); x.fillStyle = g; x.fillRect(0, 0, S, S);
+    g = x.createRadialGradient(cx, cy, S * .34, cx, cy, S * .5); g.addColorStop(0, 'rgba(4,5,13,0)'); g.addColorStop(1, 'rgba(4,5,13,1)'); x.fillStyle = g; x.fillRect(0, 0, S, S);
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t; })();
+  const bg = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: bgTex, toneMapped: false, dithering: true })); bg.position.z = -6; sc.add(bg);
+
+  // emblema: marco hexagonal de vidrio + panel esmerilado + S luminosa + nodos
+  const hex = (r) => { const s = new THREE.Shape(); for (let i = 0; i < 6; i++) { const a = Math.PI / 2 + i * Math.PI / 3, px = Math.cos(a) * r, py = Math.sin(a) * r; i ? s.lineTo(px, py) : s.moveTo(px, py); } s.closePath(); return s; };
+  const em = new THREE.Group(); sc.add(em);
+  const ringS = hex(1); ringS.holes.push(hex(.84));
+  const ringG = new THREE.ExtrudeGeometry(ringS, { depth: .2, bevelEnabled: true, bevelThickness: .05, bevelSize: .035, bevelSegments: 5, curveSegments: 1 }); ringG.center();
+  const glass = mob ? new THREE.MeshPhysicalMaterial({ color: '#cfd5ff', metalness: .1, roughness: .07, transparent: true, opacity: .58, clearcoat: 1, clearcoatRoughness: .04, iridescence: .35, iridescenceIOR: 1.3, envMapIntensity: 2.2 }) : new THREE.MeshPhysicalMaterial({ color: '#ffffff', metalness: 0, roughness: .04, transmission: 1, thickness: .4, ior: 1.52, attenuationColor: new THREE.Color('#aab4ff'), attenuationDistance: 2.6, specularIntensity: 1, clearcoat: 1, clearcoatRoughness: .03, iridescence: .35, iridescenceIOR: 1.3, envMapIntensity: 1.5 });
+  em.add(new THREE.Mesh(ringG, glass));
+  const plateG = new THREE.ExtrudeGeometry(hex(.86), { depth: .05, bevelEnabled: false }); plateG.center();
+  const plate = new THREE.Mesh(plateG, mob ? new THREE.MeshStandardMaterial({ color: '#2a3290', roughness: .35, metalness: .2, transparent: true, opacity: .78, envMapIntensity: 1.2 }) : new THREE.MeshPhysicalMaterial({ color: '#dfe3ff', roughness: .42, transmission: 1, thickness: .2, ior: 1.4, attenuationColor: new THREE.Color('#7a8bff'), attenuationDistance: 1.6, envMapIntensity: 1.1 }));
+  plate.position.z = -.07; em.add(plate);
+  const v = (x, y) => new THREE.Vector3((x - 50) / 44, -(y - 50) / 44, .02);
+  const path = new THREE.CurvePath();
+  path.add(new THREE.CubicBezierCurve3(v(63, 36), v(63, 29), v(37, 29), v(37, 40)));
+  path.add(new THREE.CubicBezierCurve3(v(37, 40), v(37, 52), v(63, 48), v(63, 60)));
+  path.add(new THREE.CubicBezierCurve3(v(63, 60), v(63, 71), v(37, 71), v(37, 63)));
+  const sMat = new THREE.MeshStandardMaterial({ color: '#ffffff', emissive: new THREE.Color('#a9b6ff'), emissiveIntensity: 1.6, roughness: .25 });
+  em.add(new THREE.Mesh(new THREE.TubeGeometry(path, 220, .068, 20, false), sMat));
+  [path.getPoint(0), path.getPoint(1)].forEach(p => { const c = new THREE.Mesh(new THREE.SphereGeometry(.068, 20, 14), sMat); c.position.copy(p); em.add(c); });
+  const nodeM = new THREE.MeshStandardMaterial({ color: '#fff', emissive: new THREE.Color('#ffffff'), emissiveIntensity: 2 });
+  for (let i = 0; i < 6; i++) { const a = Math.PI / 2 + i * Math.PI / 3, n = new THREE.Mesh(new THREE.SphereGeometry(.04, 16, 12), nodeM); n.position.set(Math.cos(a) * .92, Math.sin(a) * .92, .16); em.add(n); }
+  const glowTex = (() => { const c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d'); const g = x.createRadialGradient(128, 128, 0, 128, 128, 128); g.addColorStop(0, 'rgba(140,155,255,.9)'); g.addColorStop(.35, 'rgba(84,104,255,.35)'); g.addColorStop(1, 'rgba(84,104,255,0)'); x.fillStyle = g; x.fillRect(0, 0, 256, 256); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+  const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: .55 })); glow.scale.setScalar(3.2); glow.position.z = -.4; em.add(glow);
+  const rim = new THREE.DirectionalLight('#3fd8ff', 1.4); rim.position.set(-3, 2, -2); sc.add(rim);
+  const back = new THREE.PointLight('#5468ff', 18, 8); back.position.set(0, 0, -1.6); em.add(back);
+
+  // polvo de luz
+  const N = 260, pos = new Float32Array(N * 3), spd = new Float32Array(N);
+  for (let i = 0; i < N; i++) { pos[i * 3] = (Math.random() - .5) * 12; pos[i * 3 + 1] = (Math.random() - .5) * 7; pos[i * 3 + 2] = (Math.random() - .5) * 5 - 1; spd[i] = .05 + Math.random() * .12; }
+  const dg = new THREE.BufferGeometry(); dg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const dust = new THREE.Points(dg, new THREE.PointsMaterial({ color: '#b3bcff', size: .026, transparent: true, opacity: .6, blending: THREE.AdditiveBlending, depthWrite: false })); sc.add(dust);
+
+  // encuadre según pantalla
+  const base = { x: 0, y: 0, s: 1 };
+  const size = () => { const w = hero.clientWidth, h = hero.clientHeight; if (!w || !h) return; const dpr = devicePixelRatio || 1; rd.setPixelRatio(w >= 900 ? Math.min(2, Math.max(1.5, dpr)) : Math.min(1.5, dpr)); rd.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
+    const vh = 2 * Math.tan(THREE.MathUtils.degToRad(16)) * 7, vw = vh * cam.aspect;
+    if (w >= 900) { base.x = vw * .31; base.y = .02; base.s = Math.min(1.05, vw * .13); } else { const hr = hero.getBoundingClientRect(), cr = document.querySelector('.hero-copy').getBoundingClientRect(), nb = document.getElementById('nav').getBoundingClientRect().bottom - hr.top, top = cr.top - hr.top, px = h / vh, cy = (nb + top) / 2, rad = Math.max(60, Math.min(120, (top - nb) / 2 - 14)); base.x = 0; base.y = (h / 2 - cy) / px; base.s = rad / px; }
+    const bh = 2 * Math.tan(THREE.MathUtils.degToRad(16)) * 13 * 1.6; bg.scale.set(bh * Math.max(cam.aspect, 1), bh * Math.max(1, 1 / cam.aspect), 1); };
+  addEventListener('resize', size); new ResizeObserver(size).observe(hero);
+  size(); try { if (rd.compileAsync) await rd.compileAsync(sc, cam); } catch (e) {}
+
+  let tx = 0, ty = 0, mx = 0, my = 0, vis = true, raf = 0, last = 0, shown = false; const t0 = performance.now();
+  addEventListener('pointermove', e => { tx = e.clientX / innerWidth * 2 - 1; ty = e.clientY / innerHeight * 2 - 1; }, { passive: true });
+  const ease = (k) => 1 - Math.pow(1 - Math.min(1, Math.max(0, k)), 4);
+  const frame = (now) => {
+    raf = 0; if (!vis || document.hidden) return;
+    if (mob && now - last < 31) { raf = requestAnimationFrame(frame); return; } last = now;
+    const t = (now - t0) / 1000, sp = Math.min(1, Math.max(0, scrollY / hero.clientHeight)), intro = rm ? 1 : ease(t / 1.8);
+    mx += (tx - mx) * .05; my += (ty - my) * .05;
+    em.rotation.y = (rm ? Math.sin(t * .25) * .16 - .22 : Math.sin(t * .42) * .32 - .12) + mx * .22 + sp * 1.4 + (1 - intro) * -1.1;
+    em.rotation.x = (rm ? Math.sin(t * .3) * .04 : Math.sin(t * .55) * .07) + my * .14 + sp * .45;
+    em.position.set(base.x + mx * .08, base.y + (rm ? Math.sin(t * .5) * .035 : Math.sin(t * .8) * .06) + sp * 1.4, 0);
+    em.scale.setScalar(base.s * (.94 + .06 * intro) * (1 - sp * .2));
+    bg.position.x = base.x * .95 - mx * .25; bg.position.y = base.y * 1.1 + my * .2 - sp * .6;
+    { for (let i = 0; i < N; i++) { pos[i * 3 + 1] += spd[i] * (rm ? .004 : .01); if (pos[i * 3 + 1] > 3.6) pos[i * 3 + 1] = -3.6; } dg.attributes.position.needsUpdate = true; }
+    rd.render(sc, cam);
+    if (!shown) { shown = true; hero.classList.add('gl-on'); }
+    raf = requestAnimationFrame(frame);
+  };
+  new IntersectionObserver(([e]) => { vis = e.isIntersecting; if (vis && !raf) raf = requestAnimationFrame(frame); }).observe(hero);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && vis && !raf) raf = requestAnimationFrame(frame); });
+    raf = requestAnimationFrame(frame);
+} catch (e) { document.documentElement.classList.add('nogl'); }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+/* ===== Movimiento de la página: scroll suave, texto que se enciende, recorrido de la app y cifras ===== */
+(function(){
+  const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const desk = () => innerWidth > 900;
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), { passive: true });
+
+  // scroll suave
+  let lenis = null;
+  if (!rm && window.Lenis && window.gsap) {
+    lenis = new Lenis({ lerp: .085, smoothWheel: true });
+    if (window.ScrollTrigger) lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const id = a.getAttribute('href'); if (id.length < 2) return; const el = document.querySelector(id); if (!el) return; e.preventDefault(); lenis.scrollTo(el, { offset: id === '#top' ? 0 : -20, duration: 1.4 }); }));
+  }
+
+  const placeFB = window.__placeFB || (() => {});
+
+  // entrada de la portada: cuando las fuentes están listas (sin saltos de texto)
+  let revealed = false;
+  const reveal = () => { if (revealed) return; revealed = true; document.documentElement.classList.remove('fw'); placeFB();
+    if (!rm && window.gsap) {
+      gsap.from('.hero h1 .line > span', { yPercent: 115, duration: 1.25, ease: 'expo.out', stagger: .09, delay: .1, clearProps: 'transform' });
+      gsap.from('.hero .h-in', { opacity: 0, y: 22, duration: 1.1, ease: 'expo.out', stagger: .08, delay: .4, clearProps: 'opacity,transform' });
+    } };
+  placeFB(); (document.fonts ? document.fonts.ready : Promise.resolve()).then(reveal); setTimeout(reveal, 1500);
+
+  // manifiesto: cada palabra se enciende con el scroll
+  const rev = document.querySelector('.reveal');
+  if (rev) {
+    const wrapWords = (node) => { [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) { const f = document.createDocumentFragment(); n.textContent.split(/(\s+)/).forEach(p => { if (!p) return; if (/^\s+$/.test(p)) f.appendChild(document.createTextNode(p)); else { const s = document.createElement('span'); s.className = 'w'; s.textContent = p; f.appendChild(s); } }); n.replaceWith(f); }
+      else if (n.nodeType === 1) { if (n.classList.contains('it')) { n.classList.add('w'); } else wrapWords(n); } }); };
+    wrapWords(rev);
+    const ws = [...rev.querySelectorAll('.w')];
+    if (rm || !window.gsap || !window.ScrollTrigger) ws.forEach(w => w.style.opacity = 1);
+    else { gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.create({ trigger: '.manifesto', start: 'top top', end: 'bottom bottom', scrub: true, onUpdate: s => { const k = s.progress * 1.15 * ws.length; ws.forEach((w, i) => { w.style.opacity = Math.max(.4, Math.min(1, k - i + .4)); }); } }); }
+  }
+
+  // apariciones
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.rv').forEach((el, i) => { el.style.transitionDelay = (el.parentElement && el.parentElement.classList.contains('grid') || el.classList.contains('ref') || el.tagName === 'LI') ? ([...el.parentElement.children].indexOf(el) % 4) * 90 + 'ms' : '0ms'; io.observe(el); });
+
+  // recorrido de la app (escritorio): el móvil fijo cambia de clip según el paso
+  const steps = [...document.querySelectorAll('.step')], vids = [...document.querySelectorAll('#phone video')], dots = [...document.querySelectorAll('.dots i')];
+  let cur = -1;
+  const show = (i) => { if (i === cur) return; cur = i; steps.forEach((s, k) => s.classList.toggle('on', k === i)); dots.forEach((d, k) => d.classList.toggle('on', k === i));
+    vids.forEach((v, k) => { if (k === i) { if (!v.src) v.src = v.dataset.src; v.classList.add('on'); v.currentTime = 0; v.play().catch(() => {}); } else { v.classList.remove('on'); setTimeout(() => { if (k !== cur) v.pause(); }, 700); } }); };
+  const sio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && desk()) show(+e.target.dataset.i); }), { rootMargin: '-45% 0px -45% 0px' });
+  steps.forEach(s => sio.observe(s));
+  const pio = new IntersectionObserver(([e]) => { const v = vids[Math.max(0, cur)]; if (!v) return; if (e.isIntersecting && desk()) { if (cur < 0) show(0); else v.play().catch(() => {}); } else v.pause(); }, { threshold: .1 });
+  const pc = document.querySelector('.phone-col'); if (pc) pio.observe(pc);
+  // móvil: cada paso reproduce su clip solo cuando está a la vista
+  const mio = new IntersectionObserver(es => es.forEach(e => { const v = e.target; if (desk()) { v.pause(); return; } if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); }), { threshold: .35 });
+  document.querySelectorAll('.phone.mini video').forEach(v => mio.observe(v));
+
+  // cifras que cuentan
+  const cio = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; cio.unobserve(e.target); const el = e.target, n = +el.dataset.count; if (rm) return; const t0 = performance.now(), d = 1400;
+    const f = (now) => { const k = Math.min(1, (now - t0) / d), v = 1 - Math.pow(1 - k, 4); el.textContent = Math.round(n * v); if (k < 1) requestAnimationFrame(f); }; el.textContent = '0'; requestAnimationFrame(f); }), { threshold: .6 });
+  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+  // línea del proceso
+  const rail = document.querySelector('.proc .rail');
+  if (rail) { if (rm || !window.ScrollTrigger) rail.style.setProperty('--p', 1);
+    else ScrollTrigger.create({ trigger: '.plist', start: 'top 75%', end: 'bottom 55%', scrub: true, onUpdate: s => rail.style.setProperty('--p', s.progress.toFixed(3)) }); }
+})();
+</script>
+</body>
+</html>
