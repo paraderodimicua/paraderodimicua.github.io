@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>html,body{background:#0a0a0a}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Descargas · Synthos</title>
+<meta name="description" content="Descarga la app Synthos para Android o úsala en el navegador. Se activa con la llave de acceso de tu asesoría.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
+<style>
+/* Monocromo industrial (2026-10-24). Copia anterior (Royal): publicar/descargar.backup-20261026-royal.html */
+:root{--bg:#0a0a0a;--pan:#141414;--pan2:#1b1b1b;--ink:#f4f4f2;--soft:#bdbdb8;--mute:#8e8e8a;--dim:#6b6b68;--line:rgba(255,255,255,.1);--edge:rgba(255,255,255,.18);
+  --body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"Geist Mono",ui-monospace,monospace;--cut:12px;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;min-height:100svh;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:
+  linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/48px 48px,
+  linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/48px 48px;
+  -webkit-mask:radial-gradient(70% 55% at 50% 20%,#000,transparent);mask:radial-gradient(70% 55% at 50% 20%,#000,transparent)}
+.page{position:relative;max-width:520px;margin:0 auto;padding:0 16px calc(48px + env(safe-area-inset-bottom,0px))}
+.mono{font:500 .66rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.mono b{color:var(--ink);font-weight:500}
+.top{display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) 0 0}
+.fig{position:relative;height:170px;margin:22px 0 0;display:grid;place-items:center}
+.fig i{position:absolute;width:16px;height:16px;border:1px solid var(--edge)}
+.fig i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}.fig i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.fig i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}.fig i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+.fig svg{width:96px;height:96px}
+.fig .cap{position:absolute;left:12px;bottom:12px}.fig .cap2{position:absolute;right:12px;top:12px}
+h1{margin:26px 0 6px;font:600 clamp(2rem,9vw,2.6rem)/1 var(--body);letter-spacing:-.05em}
+h1 span{color:var(--mute)}
+.lead{margin:0 0 6px;color:var(--soft)}
+.rule{height:1px;background:var(--line);margin:22px 0}
+.card{position:relative;margin:14px 0 0;padding:20px 18px;background:var(--pan);border:1px solid var(--line);
+  clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+.card .hd{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.card h2{margin:0;font:600 1.3rem/1.15 var(--body);letter-spacing:-.035em}
+.card p{margin:0;color:var(--soft)}
+.card p+p{margin-top:8px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;margin-top:16px;padding:0 18px;
+  font:600 1rem var(--body);letter-spacing:-.01em;text-decoration:none;color:#0a0a0a;background:var(--ink);
+  clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+.btn.g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--edge)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.meta{display:block;margin-top:10px;text-align:center}
+ol{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px;counter-reset:s}
+li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:12px;background:var(--pan2);border:1px solid var(--line)}
+li::before{content:"0" counter(s);font:500 .72rem/34px var(--mono);letter-spacing:.1em;text-align:center;color:var(--ink);border:1px solid var(--edge);height:34px}
+li b{display:block;font-weight:600;margin-bottom:2px}
+li span{color:var(--mute);font-size:.94rem}
+.lock{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:12px;border:1px dashed var(--edge);color:var(--mute);font-size:.92rem}
+.lock svg{width:18px;height:18px;flex:none;margin-top:2px;fill:none;stroke:var(--soft);stroke-width:1.8}
+a{color:var(--ink)}
+.help{margin:26px 0 0;color:var(--mute);text-align:center}
+footer{margin-top:28px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+footer a{color:var(--mute);text-decoration:none}
+</style>
+<link rel="canonical" href="https://paraderodimicua.github.io/descargar/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Synthos"><meta property="og:locale" content="es_PE"><meta property="og:url" content="https://paraderodimicua.github.io/descargar/">
+<meta property="og:title" content="Descargas · Synthos"><meta property="og:description" content="Descarga la app Synthos para Android o úsala en el navegador. Se activa con la llave de acceso de tu asesoría.">
+<meta property="og:image" content="https://paraderodimicua.github.io/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Synthos: deja de adivinar tu entrenamiento">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Descargas · Synthos"><meta name="twitter:description" content="Descarga la app Synthos para Android o úsala en el navegador. Se activa con la llave de acceso de tu asesoría."><meta name="twitter:image" content="https://paraderodimicua.github.io/og.jpg">
+</head>
+<body>
+<main class="page">
+  <div class="top"><span class="mono">SYNTHOS · <b>DESCARGAS</b></span><span class="mono" id="rev">REV —</span></div>
+  <div class="fig">
+    <i></i><i></i><i></i><i></i>
+    <svg viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="fib" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><g fill="none" stroke-linejoin="miter" stroke-miterlimit="10"><path d="M72 16H37L25 28V38L37 50H63L75 62V72L63 84H28" stroke="#fff" stroke-width="20"/><path d="M74 16H37L25 28V38L37 50H63L75 62V72L63 84H26" stroke="#000" stroke-width="13"/><path d="M72 16H37L25 28V38L37 50H63L75 62V72L63 84H28" stroke="#fff" stroke-width="5"/></g></mask></defs><rect width="100" height="100" fill="#f4f4f2" mask="url(#fib)"/></svg>
+    <span class="mono cap">FIG. 01 — SYN/FIBRAS</span><span class="mono cap2">ACERO · 45°</span>
+  </div>
+
+  <h1>Synthos, <span>donde entrenes.</span></h1>
+  <p class="lead">La app de tu asesoría para Android, iPhone o el navegador. Se activa con la llave de acceso que te envié.</p>
+
+  <section class="card" aria-labelledby="d1">
+    <div class="hd"><h2 id="d1">Android</h2><span class="mono">D-01 · APK</span></div>
+    <p>Funciona sin internet. Al abrirla, pega tu llave de acceso.</p>
+    <a class="btn" id="apk" href="Synthos.apk" download="Synthos.apk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>Descargar la app</a>
+    <span class="mono meta" id="ver">ANDROID 5.1 O SUPERIOR</span>
+    <ol>
+      <li><div><b>Descarga el archivo</b><span>Si el navegador avisa del tipo de archivo, elige «Descargar de todas formas».</span></div></li>
+      <li><div><b>Permite la instalación</b><span>Android te pedirá permitir «Instalar apps desconocidas». Actívalo solo para tu navegador y vuelve atrás.</span></div></li>
+      <li><div><b>Instala y pega tu llave</b><span>Abre Synthos, pega la llave que te envié y toca «Activar». Si ya la tenías, se actualiza sin perder tus datos.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="card" aria-labelledby="d2">
+    <div class="hd"><h2 id="d2">iPhone y navegador</h2><span class="mono">D-02 · WEB</span></div>
+    <p>En iPhone, abre la versión web en Safari, toca Compartir y luego «Añadir a pantalla de inicio». En el ordenador funciona en cualquier navegador.</p>
+    <a class="btn g" href="../app/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6M12 16v4"/></svg>Abrir la versión web</a>
+  </section>
+
+  <section class="card" aria-labelledby="d3">
+    <div class="hd"><h2 id="d3">Panel de entrenador</h2><span class="mono">D-03 · COACH</span></div>
+    <p>Synthos Coach: tus alumnos, sus informes semanales con alertas y el envío de rutinas firmadas, en una app aparte de la tuya.</p>
+    <p>Se instala como app: en el ordenador o Android, abre el panel en Chrome o Edge y toca «Instalar» en la barra de direcciones o en el menú. En iPhone, Safari → Compartir → «Añadir a pantalla de inicio».</p>
+    <a class="btn g" href="../coach/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v4h-7zM13 10h7v10h-7zM4 13h7v7H4z"/></svg>Abrir el panel</a>
+    <div class="lock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg><span>Solo para el entrenador: se abre únicamente en un dispositivo con la clave del entrenador cargada. Sin ella no muestra ningún dato.</span></div>
+  </section>
+
+  <p class="help">¿Sin llave? Escríbeme «SYNTHOS» por Instagram a <a href="https://ig.me/m/sb.fano" target="_blank" rel="noopener">@sb.fano</a>.</p>
+  <footer class="mono"><a href="../">Inicio</a><a href="../links/">Enlaces</a><a href="../privacidad/">Privacidad</a><a href="../terminos/">Términos</a></footer>
+</main>
+<script>fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(v){document.getElementById('ver').textContent='VERSIÓN '+v.version+' · '+String(v.mb).replace('.',',')+' MB · ANDROID 5.1 O SUPERIOR';document.getElementById('rev').innerHTML='REV <b>'+v.version+'</b>';if(v.archivo){var a=document.getElementById('apk');a.href=v.archivo;a.setAttribute('download',v.archivo)}}).catch(function(){})</script>
+</body>
+</html>

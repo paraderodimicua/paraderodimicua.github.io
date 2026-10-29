@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>html,body{background:#0a0a0a}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biblioteca de estudios · Stefano</title>
+<meta name="description" content="Los estudios de hipertrofia que uso en mis videos, con la cifra exacta, en quién se midió y sus límites. Si no hay estudio, te lo digo.">
+<meta property="og:title" content="Biblioteca de estudios · Stefano"><meta property="og:description" content="Cada dato con su estudio: la cifra exacta, en quién se midió y sus límites.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap"></noscript>
+<style>
+/* Monocromo industrial (2026-10-24): misma estética que la landing, la app y los enlaces. Copia anterior: publicar/estudios.backup-20261024.html */
+:root{--bg:#0a0a0a;--raise:rgba(20,20,20,.9);--ink:#f4f4f2;--soft:#bdbdb8;--mute:#8e8e8a;--dim:#6b6b68;--rule:rgba(255,255,255,.1);--edge:rgba(255,255,255,.18);
+  --mono:"Geist Mono",ui-monospace,monospace;--body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+#bgfx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.55}
+a{color:inherit}
+:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+.wrap{position:relative;z-index:2;max-width:920px;margin:0 auto;padding:20px 16px 96px}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;font:500 .66rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.nav a{display:inline-flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none}
+.nav a svg{width:16px;height:16px}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+header{padding:56px 0 30px;border-bottom:1px solid var(--edge)}
+.code{margin:0 0 16px;font:500 .66rem/1 var(--mono);letter-spacing:.16em;color:var(--mute)}
+h1{margin:0;font:600 clamp(2.2rem,7vw,4.4rem)/.95 var(--body);letter-spacing:-.055em}
+h1 .g{color:var(--mute)}
+.lead{margin:18px 0 0;max-width:30rem;font-size:1.04rem;color:var(--mute)}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:28px 0 8px}
+.legend p{margin:10px 0 0;font-size:.9rem;line-height:1.45;color:var(--mute)}
+.seal{display:inline-flex;align-items:center;height:26px;padding:0 10px;font:500 .64rem var(--mono);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:var(--ink);background:var(--edge);position:relative;isolation:isolate;border:0;
+  clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)}
+.seal::before{content:"";position:absolute;inset:1px;z-index:-1;background:var(--bg);clip-path:inherit}
+.s-MEDIDO{color:#0a0a0a;background:var(--ink)}.s-MEDIDO::before{display:none}
+.s-DAIGUAL{color:var(--mute)}
+.tools{position:sticky;top:0;z-index:5;margin:28px -16px 0;padding:14px 16px 12px;background:rgba(10,10,10,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.search{display:block;width:100%;height:48px;padding:0 14px;border:0;background:var(--raise);color:var(--ink);font:inherit;font-size:1rem;box-shadow:inset 0 0 0 1px var(--edge);
+  clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+.search::placeholder{color:var(--dim)}
+.search:focus{outline:none;box-shadow:inset 0 0 0 1px var(--ink)}
+.filters{display:flex;gap:4px 18px;margin-top:12px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.filters::-webkit-scrollbar{display:none}
+.f{flex:none;appearance:none;border:0;background:none;padding:6px 0;color:var(--mute);font:500 .9rem var(--body);cursor:pointer;border-bottom:1px solid transparent}
+.f:hover{color:var(--ink)}
+.f[aria-pressed=true]{color:var(--ink);border-bottom-color:var(--ink)}
+.f .n{font:400 .74rem var(--mono);color:var(--dim);margin-left:5px}
+.sealf{display:flex;gap:8px;margin-top:10px}
+.sealf button{appearance:none;cursor:pointer;opacity:.5}
+.sealf button[aria-pressed=true],.sealf button:hover{opacity:1}
+section{padding-top:44px}
+h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 6px;font:600 clamp(1.15rem,4vw,1.6rem)/1.12 var(--body);letter-spacing:-.035em}
+h2 small{flex:none;font:500 .66rem var(--mono);color:var(--mute);letter-spacing:.14em;text-transform:uppercase}
+details{border-top:1px solid var(--rule)}
+section details:last-child{border-bottom:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:start;padding:18px 0;transition:padding .3s cubic-bezier(.16,1,.3,1)}
+summary::-webkit-details-marker{display:none}
+summary:hover{padding-left:8px}
+.claim{font-weight:500;font-size:1.05rem;line-height:1.38;max-width:40rem}
+.who{grid-column:1;font-size:.88rem;color:var(--mute)}
+summary .seal{grid-row:1 / span 2;grid-column:2;margin-top:2px}
+.ev{padding:4px 0 26px}
+.quotes{margin:0 0 22px;padding:2px 0 2px 16px;border-left:1px solid var(--ink)}
+.quotes p{margin:0 0 8px;font:400 clamp(.84rem,2.6vw,.94rem)/1.55 var(--mono);color:var(--ink);overflow-wrap:anywhere}
+.quotes p:last-child{margin:0}
+dl{display:grid;grid-template-columns:9rem 1fr;gap:10px 22px;margin:0;font-size:.94rem}
+dt{color:var(--dim);font:500 .7rem/1.9 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+dd{margin:0;color:var(--soft);overflow-wrap:anywhere}
+dd a{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--edge)}
+.empty{padding:48px 0;color:var(--mute)}
+.empty button{appearance:none;background:none;border:0;padding:0;color:var(--ink);font:inherit;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--rule);display:grid;gap:12px;color:var(--mute);font-size:.9rem;max-width:40rem}
+footer p{margin:0}
+footer a{color:var(--ink);margin-right:18px;text-underline-offset:3px;text-decoration-color:var(--edge)}
+/* movimiento: cada sección entra desde el lateral, con sus filas en cascada */
+@media (prefers-reduced-motion:no-preference){
+  section h2,section details{animation:sl .9s cubic-bezier(.16,1,.3,1) both}
+  section details:nth-of-type(2){animation-delay:.05s}section details:nth-of-type(3){animation-delay:.1s}section details:nth-of-type(4){animation-delay:.15s}section details:nth-of-type(n+5){animation-delay:.2s}
+  header .code,header h1,header .lead,.legend div{animation:sl 1.1s cubic-bezier(.16,1,.3,1) both}
+  header h1{animation-delay:.08s}header .lead{animation-delay:.16s}.legend div:nth-child(2){animation-delay:.22s}.legend div:nth-child(3){animation-delay:.28s}
+  details[open] .ev{animation:open .25s ease-out}
+}
+@keyframes sl{from{opacity:0;transform:translateX(-28px)}}
+@keyframes open{from{opacity:0;transform:translateY(-4px)}}
+@media (min-width:641px){.filters{flex-wrap:wrap;overflow:visible;white-space:normal}}
+@media (max-width:640px){
+  body{font-size:16px}
+  header{padding:40px 0 24px}
+  .legend{grid-template-columns:1fr;gap:14px}
+  .legend div{display:grid;grid-template-columns:7.4rem 1fr;align-items:start;gap:12px}
+  .legend p{margin:2px 0 0}
+  dl{grid-template-columns:1fr;gap:2px}
+  dd{margin-bottom:12px}
+  summary{gap:8px 14px}
+}
+/* ---------- pantalla de carga: cristal translúcido con siluetas de lo que va a aparecer (nunca una pantalla en blanco) ---------- */
+#pre{position:fixed;inset:0;z-index:100;background:rgba(10,10,10,.62);-webkit-backdrop-filter:blur(18px) saturate(115%);backdrop-filter:blur(18px) saturate(115%);transition:opacity .8s cubic-bezier(.16,1,.3,1),visibility .8s}
+#pre.out{opacity:0;visibility:hidden}
+#pre .sk{position:absolute;display:block;background:linear-gradient(90deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,.13) 45%,rgba(255,255,255,.05) 90%) 0 0/300% 100%;animation:shim 1.4s linear infinite;clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)}
+@keyframes shim{to{background-position:-300% 0}}
+#pre .lg{position:absolute;display:grid;place-items:center;border:1px solid rgba(255,255,255,.12)}
+#pre .lg svg{width:58%;height:58%}
+#pre .lg path{fill:none;stroke:#f4f4f2;stroke-width:6;stroke-linejoin:miter;stroke-dasharray:300;stroke-dashoffset:300;animation:draw 1.6s cubic-bezier(.65,0,.35,1) infinite alternate}
+@keyframes draw{to{stroke-dashoffset:0}}
+#pre .st{position:absolute;font:500 .64rem/1 "Geist Mono",ui-monospace,monospace;letter-spacing:.18em;color:#8e8e8a;white-space:nowrap}
+#pre .bar{position:absolute;height:1px;background:rgba(255,255,255,.12);overflow:hidden}
+#pre .bar::after{content:"";position:absolute;inset:0;background:#f4f4f2;transform-origin:left;animation:ld 2.4s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes ld{from{transform:scaleX(0)}to{transform:scaleX(.92)}}
+@media (prefers-reduced-motion:reduce){#pre .sk,#pre .lg path,#pre .bar::after{animation:none}#pre .lg path{stroke-dashoffset:0}}
+#pre .in{position:relative;max-width:920px;height:100%;margin:0 auto}
+#pre .lg{left:16px;top:70px;width:64px;height:64px}#pre .st{left:96px;top:96px}
+#pre .k1{left:16px;top:160px;width:min(70%,560px);height:clamp(40px,7vw,70px)}#pre .k2{left:16px;top:calc(170px + clamp(40px,7vw,70px));width:min(50%,400px);height:16px}
+#pre .bar{left:16px;right:16px;top:calc(210px + clamp(40px,7vw,70px))}
+#pre .k3,#pre .k4,#pre .k5,#pre .k6{left:16px;right:16px;height:60px}#pre .k3{top:calc(240px + clamp(40px,7vw,70px))}#pre .k4{top:calc(310px + clamp(40px,7vw,70px))}#pre .k5{top:calc(380px + clamp(40px,7vw,70px))}#pre .k6{top:calc(450px + clamp(40px,7vw,70px))}
+
+/* ===== Estética 27-oct: igual que descargas y la app (cuadrícula, logo de fibras, tarjetas con cortes a 45°) ===== */
+body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/48px 48px;-webkit-mask:radial-gradient(80% 50% at 50% 12%,#000,transparent);mask:radial-gradient(80% 50% at 50% 12%,#000,transparent)}
+.fig{position:relative;height:150px;margin:18px 0 26px;display:grid;place-items:center}
+.fig i{position:absolute;width:16px;height:16px;border:1px solid var(--edge)}
+.fig i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}.fig i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.fig i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}.fig i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+.fig svg{width:84px;height:84px}
+.fig .cap{position:absolute;left:12px;bottom:12px;font:500 .6rem var(--mono);letter-spacing:.16em;color:var(--mute)}
+.fig .cap2{position:absolute;right:12px;top:12px;font:500 .6rem var(--mono);letter-spacing:.16em;color:var(--mute)}
+header{padding:26px 0 30px}
+.legend{gap:10px}
+.legend>div{padding:14px;background:#141414;border:1px solid var(--rule);clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+.f{padding:7px 12px;border:1px solid var(--rule);clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)}
+.f[aria-pressed=true]{background:var(--ink);color:#0a0a0a;border-color:var(--ink)}
+.f[aria-pressed=true] .n{color:#3a3a3a}
+.filters{gap:6px}
+section{padding-top:36px}
+h2{padding-bottom:10px;border-bottom:1px solid var(--edge);margin-bottom:12px}
+details,section details:last-child{border:1px solid var(--rule);background:#121212;margin:0 0 10px;padding:0 16px;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);transition:background .2s,border-color .2s}
+details:hover{border-color:var(--edge)}
+details[open]{background:#161616;border-color:var(--edge)}
+summary{padding:16px 0}
+summary:hover{padding-left:0}
+.quotes{background:rgba(255,255,255,.025);padding:12px 14px;border-left:2px solid var(--ink)}
+@media (max-width:620px){.legend{grid-template-columns:1fr}}
+</style>
+
+<link rel="canonical" href="https://paraderodimicua.github.io/estudios/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Synthos"><meta property="og:locale" content="es_PE"><meta property="og:url" content="https://paraderodimicua.github.io/estudios/">
+
+<meta property="og:image" content="https://paraderodimicua.github.io/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Synthos: deja de adivinar tu entrenamiento">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Biblioteca de estudios · Stefano"><meta name="twitter:description" content="Cada dato con su estudio: la cifra exacta, en quién se midió y sus límites."><meta name="twitter:image" content="https://paraderodimicua.github.io/og.jpg">
+</head>
+<body>
+<div id="pre" aria-hidden="true"><div class="in"><div class="lg"><svg viewBox="0 0 100 100"><path d="M72 16H37L25 28V38L37 50H63L75 62V72L63 84H28"/></svg></div><span class="st">CARGANDO · TABLA 02</span><i class="sk k1"></i><i class="sk k2"></i><span class="bar"></span><i class="sk k3"></i><i class="sk k4"></i><i class="sk k5"></i><i class="sk k6"></i></div></div>
+<script>/* quita la pantalla de carga cuando la página ya está pintada (mínimo 0,7 s para que no parpadee, máximo 3,5 s) */
+(function(){var p=document.getElementById('pre'),t0=Date.now(),done=0;function hide(){if(done)return;done=1;setTimeout(function(){p.classList.add('out');setTimeout(function(){p.remove()},900)},Math.max(0,700-(Date.now()-t0)))}
+addEventListener('load',function(){setTimeout(hide,150)});setTimeout(hide,3500)})();</script>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+<div class="wrap">
+  <nav class="nav"><a href="/links/"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M72 16H37L25 28V38L37 50H63L75 62V72L63 84H28" fill="none" stroke="#f4f4f2" stroke-width="14" stroke-linejoin="miter"/></svg>Stefano · SYN—LAB</a><span>REV 27·10·2026</span></nav>
+  <header>
+    <div class="fig" aria-hidden="true"><i></i><i></i><i></i><i></i><svg viewBox="0 0 100 100"><defs><mask id="fib" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><g fill="none" stroke-linejoin="miter" stroke-miterlimit="10"><path d="M72 16H37L25 28V38L37 50H63L75 62V72L63 84H28" stroke="#fff" stroke-width="20"/><path d="M74 16H37L25 28V38L37 50H63L75 62V72L63 84H26" stroke="#000" stroke-width="13"/><path d="M72 16H37L25 28V38L37 50H63L75 62V72L63 84H28" stroke="#fff" stroke-width="5"/></g></mask></defs><rect width="100" height="100" fill="#f4f4f2" mask="url(#fib)"/></svg><span class="cap">FIG. 02 — SYN/REF</span><span class="cap2">FUENTE · CIFRA · LÍMITE</span></div>
+    <p class="code">TABLA 02 — REF. BIBLIOGRÁFICA</p>
+    <h1>Biblioteca <span class="g">de estudios</span></h1>
+    <p class="lead">Los estudios de mis vídeos: la cifra original, en quién se midió y qué no demuestra. Sin estudio, no entra.</p>
+  </header>
+  <div class="legend">
+    <div><span class="seal s-MEDIDO">Medido</span><p>Se midió el crecimiento o la fuerza tras semanas de entrenamiento.</p></div>
+    <div><span class="seal s-ANATOMIA">Anatomía</span><p>Qué hace el músculo o la sustancia. Lo explica, pero no mide que crezcas más.</p></div>
+    <div><span class="seal s-DAIGUAL">Da igual</span><p>Se comparó y salió parecido. Elige la opción que te resulte cómoda.</p></div>
+  </div>
+  <div class="tools">
+    <input class="search" id="q" type="search" placeholder="Busca un músculo, ejercicio o suplemento" aria-label="Buscar en la biblioteca">
+    <div class="filters" id="secs" role="group" aria-label="Tema"></div>
+    <div class="sealf" id="sels" role="group" aria-label="Sello"></div>
+  </div>
+  <main id="list"></main>
+  <footer>
+    <p>Cómo se arma: abro el resumen o el texto original (PubMed o la revista) y copio la frase textual. Las citas van en inglés porque así las publica el estudio.</p>
+    <p>No es consejo médico. Si tienes una enfermedad, tomas medicación o algo te duele, consúltalo con un profesional de la salud.</p>
+    <p><a href="/links/">Mis enlaces</a><a href="/">Asesoría 1:1</a></p>
+  </footer>
+</div>
+<script>
+const S = {
+  vol: "Volumen y frecuencia",
+  esf: "Descanso, tempo y esfuerzo",
+  rom: "Recorrido y longitud muscular",
+  sel: "Elección de ejercicio por músculo",
+  emg: "Activación (EMG) y foco",
+  ana: "Anatomía",
+  nut: "Nutrición y suplementos",
+  rec: "Sueño e hidratación"
+};
+// Cada estudio: verificado en la fuente (PubMed o revista). Cifra textual del resumen.
+const D = [
+// ---------- Volumen y frecuencia ----------
+{s:"vol",g:"MEDIDO",c:"Más series por semana, más crecimiento, de forma graduada",
+ cit:"Schoenfeld, Ogborn y Krieger, 2017 · J Sports Sci 35(11):1073-1082",tipo:"Metaanálisis",
+ comp:"Más frente a menos series semanales por músculo",
+ pob:"15 estudios, 34 grupos. El resumen no dice si eran entrenados.",
+ res:["Each additional set was associated with an increase in effect size (ES) of 0.023 corresponding to an increase in the percentage gain by 0.37%","a graded dose-response relationship whereby increases in RT volume produce greater gains"],
+ lim:"La categoría más alta era «10 o más» series: el estudio no dice cuál es el máximo útil. El +0,37 % por serie es un promedio; no se puede extrapolar a 20 o 30 series.",
+ uso:"Reel de volumen (14 oct)",doi:"10.1080/02640414.2016.1210197",pmid:"27433992"},
+{s:"vol",g:"MEDIDO",c:"Con el mismo volumen, 2 veces por semana por músculo superó a 1",
+ cit:"Schoenfeld, Ogborn y Krieger, 2016 · Sports Med 46(11):1689-1697",tipo:"Metaanálisis",
+ comp:"Entrenar un músculo 1 frente a 2 o más veces por semana",
+ pob:"10 estudios.",
+ res:["higher frequency being associated with a greater effect size than lower frequency (0.49 ± 0.08 vs. 0.30 ± 0.07, respectively)","whether training a muscle group three times per week is superior to a twice-per-week protocol remains to be determined"],
+ lim:"No dice si 3 veces es mejor que 2.",
+ uso:"Pilar «Culturismo de primer nivel» (mes 2)",doi:"10.1007/s40279-016-0543-8",pmid:"27102172"},
+// ---------- Descanso, tempo y esfuerzo ----------
+{s:"esf",g:"MEDIDO",c:"En hombres entrenados, descansar 3 min dio más fuerza y más cuádriceps que 1 min",
+ cit:"Schoenfeld et al., 2016 · J Strength Cond Res 30(7):1805-1812",tipo:"Ensayo aleatorizado",
+ comp:"Descanso de 1 min frente a 3 min entre series",
+ pob:"21 hombres jóvenes entrenados · 8 semanas · 3 días/semana, 3×8-12RM, 7 ejercicios.",
+ res:["Muscle thickness was significantly greater for LONG compared to SHORT in the anterior thigh,","and a trend for greater increases was noted in the triceps brachii (p = 0.06)"],
+ lim:"Estudio pequeño. Solo el cuádriceps fue significativo; el resumen no da porcentajes.",
+ uso:"Reel de descanso (22 oct) · formato Diagnóstico",doi:"10.1519/JSC.0000000000001272",pmid:"26605807"},
+{s:"esf",g:"MEDIDO",c:"Descansar más de 1 min da una ventaja pequeña; por encima de 90 s, sin diferencias claras",
+ cit:"Singer et al., 2024 · Front Sports Act Living 6:1429789",tipo:"Metaanálisis bayesiano",
+ comp:"Descansos cortos frente a largos",
+ pob:"9 estudios, 19 mediciones. El resumen no da el nivel.",
+ res:["results suggest a small hypertrophic benefit to employing inter-set rest interval durations >60 s,","our analysis did not detect appreciable differences in hypertrophy when resting >90 s between sets,"],
+ lim:"Pocos estudios; los intervalos cruzan el cero. Es una ventaja pequeña y probable, no una diferencia clara.",
+ uso:"Reel de descanso (22 oct) · formato Diagnóstico",doi:"10.3389/fspor.2024.1429789",pmid:"39205815"},
+{s:"esf",g:"DA IGUAL",c:"Entre 0,5 y 8 s por repetición, el músculo creció parecido; muy lento (>10 s) es peor",
+ cit:"Schoenfeld, Ogborn y Krieger, 2015 · Sports Med 45(4):577-585",tipo:"Metaanálisis",
+ comp:"Distintas duraciones de la repetición",
+ pob:"8 estudios. El resumen no da el número de participantes ni su nivel.",
+ res:["hypertrophic outcomes are similar when training","with repetition durations ranging from 0.5 to 8 s.","very slow durations (>10s per repetition) is inferior"],
+ lim:"Metaanálisis de 2015 con pocos estudios.",
+ uso:"Destacada «Mi app» · todas las FICHAS (tempo)",doi:"10.1007/s40279-015-0304-0",pmid:"25601394"},
+{s:"esf",g:"DA IGUAL",c:"El tempo tiene un efecto mínimo en la hipertrofia: ir lento no hace crecer más",
+ cit:"Enes et al., 2025 · J Strength Cond Res 39(12):1331-1339",tipo:"Metaanálisis",
+ comp:"Tempo lento (~3,5 s) frente a rápido (~1 s)",
+ pob:"14 estudios, adultos sanos.",
+ res:["resistance training tempo appears to have minimal overall effect on muscle hypertrophy,","(pooled mean = 0.09 [95% CrI: -0.04 to 0.22])"],
+ lim:"Diferencia trivial; en algunos subgrupos la certeza es baja.",
+ uso:"Destacada «Mi app» · todas las FICHAS (tempo)",doi:"10.1519/JSC.0000000000005302",pmid:"42709703"},
+{s:"esf",g:"MEDIDO",c:"Escala RIR: RPE 10 = 0 repeticiones en reserva, RPE 9 = 1…",
+ cit:"Zourdos et al., 2016 · J Strength Cond Res 30(1):267-275",tipo:"Estudio de validación",
+ comp:"Esfuerzo percibido frente a repeticiones en reserva y velocidad de la barra",
+ pob:"29 personas (15 experimentadas, 14 novatas) · sentadilla.",
+ res:["(RPE-10 = 0-RIR, RPE-9 = 1-RIR, and so forth)."],
+ lim:"Solo sentadilla; la relación fue más fuerte en experimentados.",
+ uso:"Carrusel RIR (27 oct)",doi:"10.1519/JSC.0000000000001049",pmid:"26049792"},
+{s:"esf",g:"MEDIDO",c:"Al estimar las repeticiones en reserva fallamos, de media, por casi 1",
+ cit:"Halperin et al., 2022 · Sports Med 52(2):377-390",tipo:"Revisión de alcance con metaanálisis exploratorio",
+ comp:"Repeticiones que la gente cree que le quedan frente a las reales",
+ pob:"12 estudios, 414 participantes.",
+ res:["tended to underpredict the number of repetitions to task failure by 0.95 repetitions","(95% confidence interval [CI] 0.17-1.73)"],
+ lim:"Diferencias enormes entre estudios (I² = 97,9 %). Es exploratorio. Se afina cerca del fallo.",
+ uso:"Carrusel RIR (27 oct)",doi:"10.1007/s40279-021-01559-x",pmid:"34542869"},
+// ---------- Recorrido y longitud ----------
+{s:"rom",g:"MEDIDO",c:"Recorrido completo por defecto: superó al parcial en fuerza e hipertrofia del tren inferior",
+ cit:"Pallarés et al., 2021 · Scand J Med Sci Sports 31(10):1866-1881",tipo:"Metaanálisis",
+ comp:"Recorrido completo frente a parcial",
+ pob:"16 estudios. El resumen no da el número de participantes.",
+ res:["Full ROM training produced significantly greater adaptations than partial ROM on muscle strength (ES = 0.56, p = 0.004) and lower-limb hypertrophy (ES = 0.88, p = 0.027)."],
+ lim:"Mezcla parciales en la parte corta y en la estirada; la mayoría eran cortos.",
+ uso:"FICHA 003 · pilar «Culturismo de primer nivel»",doi:"10.1111/sms.14006",pmid:"34170576"},
+{s:"rom",g:"DA IGUAL",c:"Completo frente a parcial: diferencia trivial a favor del completo",
+ cit:"Wolf et al., 2023 · Int J Strength Cond 3(1)",tipo:"Metaanálisis bayesiano",
+ comp:"Recorrido completo frente a parcial",
+ pob:"El resumen no da el número de estudios.",
+ res:["a trivial SMD (0.12; 95% CI: –0.02, 0.26) in favour of full ROM compared to partial ROM."],
+ lim:"El intervalo cruza el cero. Sugiere una posible ventaja del parcial en la parte estirada, también incierta.",
+ uso:"FICHA 003",doi:"10.47206/ijsc.v3i1.182"},
+{s:"rom",g:"DA IGUAL",c:"Parciales en estiramiento igualaron al recorrido completo en entrenados",
+ cit:"Wolf et al., 2025 · PeerJ 13:e18904",tipo:"Ensayo intrasujeto",
+ comp:"Parciales en la parte estirada frente a recorrido completo",
+ pob:"30 personas entrenadas · 8 semanas.",
+ res:["Both muscle thickness and unilateral lat pulldown 10-repetition-maximum improvements were similar between the two conditions."],
+ lim:"Tren superior; 8 semanas.",
+ uso:"FICHA 003 Dorsal (jalón)",doi:"10.7717/peerj.18904",pmid:"39959841"},
+{s:"rom",g:"DA IGUAL",c:"Ensayo grande: parciales en estiramiento y recorrido completo, prácticamente equivalentes",
+ cit:"Gschneidner et al., 2025 · J Sports Sci 43(23):2963-2976",tipo:"Ensayo aleatorizado multicéntrico",
+ comp:"Parciales en estiramiento frente a recorrido completo (brazos y muslos)",
+ pob:"297 personas (163 y 134) en 15 centros · 12 semanas. El resumen no da el nivel.",
+ res:["between condition effects are small and practically equivalent."],
+ lim:"El resumen no dice si eran entrenados.",
+ uso:"FICHA 003 · pilar «Culturismo de primer nivel»",doi:"10.1080/02640414.2025.2567805",pmid:"41055237"},
+{s:"rom",g:"MEDIDO",c:"Curl femoral sentado: isquios +14 %; tumbado: +9 %",
+ cit:"Maeo et al., 2021 · Med Sci Sports Exerc 53(4):825-837",tipo:"Ensayo intrasujeto",
+ comp:"Curl femoral sentado (cadera flexionada, isquio estirado) frente a tumbado",
+ pob:"20 adultos · 12 semanas · 5×10 al 70 % 1RM, 2 por semana.",
+ res:["greater in Seated-Leg versus Prone-Leg for the whole hamstrings (+14% vs +9%)"],
+ lim:"20 personas. La diferencia está en los músculos biarticulares; en la cabeza corta del bíceps femoral, igual.",
+ uso:"FICHA 005 Isquios",doi:"10.1249/MSS.0000000000002523",pmid:"33009197"},
+{s:"rom",g:"MEDIDO",c:"Gemelo: la mitad estirada del recorrido dio más crecimiento que el recorrido completo",
+ cit:"Kassiano et al., 2023 · J Strength Cond Res 37(9):1746-1753",tipo:"Ensayo aleatorizado (3 grupos)",
+ comp:"Parcial estirado frente a completo frente a parcial corto",
+ pob:"42 mujeres jóvenes · 8 semanas. El resumen no dice si eran entrenadas.",
+ res:["INITIAL ROM elicited greater medial gastrocnemius increases than FULL ROM and FINAL ROM (INITIAL ROM = +15.2% vs. FULL ROM = +6.7% and FINAL ROM = +3.4%; p ≤ 0.009)."],
+ lim:"Solo mujeres, un músculo, ecografía.",
+ uso:"FICHA 006 Gemelo",doi:"10.1519/JSC.0000000000004460",pmid:"37015016"},
+{s:"rom",g:"DA IGUAL",c:"Crecimiento por zonas: entrenar más largo o más corto dio efectos similares",
+ cit:"Varovic et al., 2025 · Int J Sports Med 46(14):1027-1036",tipo:"Metaanálisis bayesiano",
+ comp:"Entrenar con el músculo más largo frente a más corto",
+ pob:"12 estudios con adultos jóvenes.",
+ res:["Our findings suggest that RT at both longer and shorter mean muscle lengths produces similar hypertrophic effects."],
+ lim:"Las diferencias de longitud entre condiciones eran pequeñas (≈22 %). La ventaja de «entrenar estirado» no es universal.",
+ uso:"Concepto «Longitud muscular»",doi:"10.1055/a-2615-4935",pmid:"40570881"},
+{s:"rom",g:"DA IGUAL",c:"Prensa en entrenados: más profundidad de rodilla no dio más cuádriceps",
+ cit:"Larsen et al., 2025 · J Sports Sci 43(10):986-994",tipo:"Ensayo intrasujeto",
+ comp:"Dos recorridos de rodilla en la prensa",
+ pob:"23 personas entrenadas (7,2 años de media) · 8 semanas.",
+ res:["both knee flexion ROMs are similarly effective for promoting quadriceps femoris muscle hypertrophy"],
+ lim:"8 semanas; un solo ejercicio.",
+ uso:"FICHA 007 Cuádriceps",doi:"10.1080/02640414.2025.2481534",pmid:"40113586"},
+{s:"rom",g:"MEDIDO",c:"La ventaja de entrenar estirado aparece cuando la carga pesa de verdad en esa posición",
+ cit:"Pedrosa, Pereira y Kassiano, 2026 · Sports Med Int Open 10:a27337605",tipo:"Revisión narrativa",
+ comp:"Longitud muscular, recorrido y selección de ejercicio",
+ pob:"Revisión de estudios previos.",
+ res:["occurs when there is a relevant external torque in the lengthened position.","external torque is affected by the load lifted and the external moment arm."],
+ lim:"Revisión narrativa, no metaanálisis.",
+ uso:"Concepto «Brazo de momento» · FICHAS 003-004",doi:"10.1055/a-2733-7605",pmid:"41777276"},
+// ---------- Elección de ejercicio ----------
+{s:"sel",g:"MEDIDO",c:"Tríceps por encima de la cabeza: ~1,4 veces más crecimiento que con el brazo abajo",
+ cit:"Maeo et al., 2023 · Eur J Sport Sci 23(7):1240-1250",tipo:"Ensayo intrasujeto",
+ comp:"Extensión de codo con el brazo arriba frente a abajo",
+ pob:"21 adultos · 12 semanas · 5×10 al 70 % 1RM, 2 por semana.",
+ res:["1.4-fold greater for the Whole-TB (+19.9% vs. +13.9%, d = 0.54, P < 0.001)","(+28.5% vs. +19.6%, Cohen's d = 0.61, P < 0.001)"],
+ lim:"Un estudio. También crecieron más las cabezas que no se estiran: el porqué no está claro.",
+ uso:"FICHA 002 Tríceps · destacada «Estudios»",doi:"10.1080/17461391.2022.2100279",pmid:"35819335"},
+{s:"sel",g:"MEDIDO",c:"Extensión de rodilla: recto femoral +13,2 %; prensa: +1,1 %",
+ cit:"Kinoshita et al., 2026 · Med Sci Sports Exerc 58(7):1566-1580",tipo:"Ensayo intrasujeto",
+ comp:"Extensión de rodilla frente a prensa",
+ pob:"17 adultos principiantes · 12 semanas.",
+ res:["Rectus femoris volume gains were greater for KE than LP (+13.2% vs +1.1%, P ≤ 0.001)","whole QF (+7.1% vs +4.9%) were comparable"],
+ lim:"Principiantes. Los vastos y el cuádriceps total crecieron parecido; la prensa además hizo crecer glúteo y aductor mayor.",
+ uso:"FICHA 007 Cuádriceps",doi:"10.1249/MSS.0000000000003957",pmid:"41630124"},
+{s:"sel",g:"MEDIDO",c:"Extensión de rodilla: más recto femoral; sentadilla: más vasto lateral distal",
+ cit:"Kassiano et al., 2026 · J Strength Cond Res 40(4):367-376",tipo:"Ensayo aleatorizado",
+ comp:"Sentadilla (Smith) frente a extensión de rodilla",
+ pob:"63 mujeres jóvenes principiantes · 8 semanas.",
+ res:["(proximal: +11.4% vs. +2.0%; middle: +12.3% vs. +5.7%; distal: 17.5% vs. +7.9%; all p < 0.001)","the SQ showed greater increases in VL at the distal site (+18.2% vs. +11.2%; p < 0.001)."],
+ lim:"Mujeres principiantes; sentadilla en Smith; ecografía.",
+ uso:"FICHA 007 Cuádriceps",doi:"10.1519/JSC.0000000000005338",pmid:"41379528"},
+{s:"sel",g:"MEDIDO",c:"Gemelo: de pie creció mucho más que sentado",
+ cit:"Kinoshita et al., 2023 · Front Physiol 14:1272106",tipo:"Ensayo intrasujeto",
+ comp:"Elevación de talones de pie (rodilla recta) frente a sentado",
+ pob:"14 adultos principiantes · 12 semanas.",
+ res:["lateral gastrocnemius (12.4% vs. 1.7%), medial gastrocnemius (9.2% vs. 0.6%), and whole triceps surae (5.6% vs. 2.1%)","(2.1% vs. 2.9%, p = 0.410)"],
+ lim:"14 principiantes. El sóleo creció parecido en las dos.",
+ uso:"FICHA 006 Gemelo",doi:"10.3389/fphys.2023.1272106",pmid:"38156065"},
+{s:"sel",g:"MEDIDO",c:"Isquios: con la cadera flexionada crecieron más los que también extienden la cadera",
+ cit:"Maeo et al., 2024 · Med Sci Sports Exerc 56(10):1893-1905",tipo:"Ensayo aleatorizado con grupo control",
+ comp:"Excéntrico con la cadera flexionada frente a nórdico",
+ pob:"42 hombres jóvenes · 12 semanas.",
+ res:["LSET induced greater increases in hamstrings (+18% vs +11%)","LSET was more effective for increasing the size of knee flexors that also extend the hip (2.2-fold vs NHT)"],
+ lim:"Solo hombres jóvenes. El nórdico hizo crecer más los flexores que no extienden la cadera.",
+ uso:"FICHA 005 Isquios",doi:"10.1249/MSS.0000000000003490",pmid:"38857522"},
+{s:"sel",g:"MEDIDO",c:"Curl inclinado: algo más de bíceps; predicador: más braquial; el brazo total, igual",
+ cit:"Kobayashi et al., 2026 · J Sports Sci (en línea 4 oct 2026)",tipo:"Ensayo intrasujeto",
+ comp:"Curl inclinado frente a curl predicador con mancuerna",
+ pob:"21 adultos principiantes · 12 semanas.",
+ res:["BB hypertrophy was greater after incline than preacher training (+22.1% vs. +18.9%, Hedges' g = 0.33)","Total elbow flexor hypertrophy did not differ (+17.6% vs. +19.2%, g = 0.22, P = 0.134)."],
+ lim:"Principiantes; diferencias pequeñas o moderadas.",
+ uso:"FICHA 004 Bíceps",doi:"10.1080/02640414.2026.2741751",pmid:"42829982"},
+{s:"sel",g:"MEDIDO",c:"Bíceps: el inclinado cargó más la zona cercana al hombro y el predicador la cercana al codo",
+ cit:"Kassiano et al., 2025 · Int J Sports Med 46(5):334-343",tipo:"Ensayo aleatorizado",
+ comp:"Curl predicador frente a curl inclinado",
+ pob:"63 mujeres jóvenes · 8 semanas. El resumen no dice si eran entrenadas.",
+ res:["(mean difference=0.08 cm [95% confidence interval: 0.02, 0.13 cm])","(mean difference=0.10 cm [95%CI: 0.04, 0.15 cm])"],
+ lim:"Diferencias de alrededor de 1 mm; solo mujeres.",
+ uso:"FICHA 004 Bíceps",doi:"10.1055/a-2517-0509",pmid:"39809454"},
+{s:"sel",g:"DA IGUAL",c:"Bíceps: con el mismo perfil de la polea, cambiar el ángulo del hombro no cambió el crecimiento",
+ cit:"Attarieh et al., 2025 · Eur J Sport Sci 25(4):e12279",tipo:"Ensayo intrasujeto",
+ comp:"Curl predicador frente a curl Bayesian en polea",
+ pob:"15 hombres jóvenes · 10 semanas.",
+ res:["the shoulder joint angle does not seem to affect muscle hypertrophy and maximum strength gains after different elbow flexion exercises matched for resistance profiles."],
+ lim:"15 personas; la ecografía no separa las cabezas del bíceps.",
+ uso:"FICHA 004 Bíceps (Bayesian)",doi:"10.1002/ejsc.12279",pmid:"40082069"},
+{s:"sel",g:"DA IGUAL",c:"Curl en polea: echar el brazo atrás (tipo Bayesian) no cambió el crecimiento",
+ cit:"Larsen et al., 2026 · Front Physiol 17:1750722",tipo:"Ensayo aleatorizado intrasujeto",
+ comp:"Hombro extendido frente a neutro en el curl de polea, con el mismo perfil",
+ pob:"24 hombres principiantes · 10 semanas.",
+ res:["Both conditions produced increases in muscle thickness of approximately 7%-9%.","altering shoulder extension angle in isolation does not appear to produce meaningful differences"],
+ lim:"Principiantes; la ecografía no separa bíceps y braquial.",
+ uso:"FICHA 004 Bíceps (Bayesian)",doi:"10.3389/fphys.2026.1750722",pmid:"41988507"},
+{s:"sel",g:"DA IGUAL",c:"Curl predicador: polea y barra hicieron crecer igual el bíceps",
+ cit:"Nunes et al., 2020 · Int J Environ Res Public Health 17(16):5859",tipo:"Ensayo controlado",
+ comp:"Polea (pesa más arriba) frente a barra (pesa más abajo)",
+ pob:"35 adultos jóvenes · 10 semanas. El resumen no dice si eran entrenados.",
+ res:["biceps brachii thickness (CAB: 7%; BAR = 8%; p = 0.346)","gains in muscular strength were greater for BAR only at longer muscle length."],
+ lim:"Vale para esa colocación de la polea, no para «la polea» en general.",
+ uso:"Concepto «Brazo de momento»",doi:"10.3390/ijerph17165859",pmid:"32823490"},
+{s:"sel",g:"DA IGUAL",c:"Elevaciones laterales: polea y mancuerna dieron un crecimiento similar",
+ cit:"Larsen et al., 2025 · Front Physiol 16:1611468",tipo:"Ensayo intrasujeto",
+ comp:"Elevación lateral en polea frente a mancuerna",
+ pob:"24 personas entrenadas · 8 semanas.",
+ res:["lateral deltoid muscle thickness increased by 3.3%-4.6% during the intervention.","both dumbbell and cable lateral raises are similarly effective for"],
+ lim:"24 personas; ecografía en 2 puntos.",
+ uso:"FICHA deltoides lateral (mes 2)",doi:"10.3389/fphys.2025.1611468",pmid:"40692697"},
+{s:"sel",g:"DA IGUAL",c:"Máquina o peso libre: hipertrofia similar",
+ cit:"Haugen et al., 2023 · BMC Sports Sci Med Rehabil 15(1):103",tipo:"Metaanálisis",
+ comp:"Máquinas frente a peso libre",
+ pob:"13 estudios (5 con hipertrofia), 1016 participantes.",
+ res:["hypertrophy (SMD: -0.055, CI: -0.397, 0.287, p = 0.751)"],
+ lim:"Solo 5 estudios midieron hipertrofia.",
+ uso:"Concepto «Brazo de momento»",doi:"10.1186/s13102-023-00713-4",pmid:"37582807"},
+{s:"sel",g:"MEDIDO",c:"Press inclinado: algo más de crecimiento en la parte alta del pecho que el plano",
+ cit:"Chaves et al., 2020 · Int J Exerc Sci 13(6):859-872",tipo:"Ensayo aleatorizado",
+ comp:"Press plano frente a inclinado frente a combinado",
+ pob:"47 hombres principiantes · 8 semanas · 1 sesión por semana.",
+ res:["Changes in muscle thickness differed only in one of the three sites.","[mean difference (95% CI) of 0.62 (0.23, 1.0) cm, p=0.003]"],
+ lim:"Un estudio, principiantes, una sesión por semana; solo 1 de 3 puntos difirió.",
+ uso:"FICHA 001 Pecho",doi:"10.70252/FDNB1158",pmid:"32922646"},
+{s:"sel",g:"DA IGUAL",c:"Pec deck: la parte clavicular y la esternal del pecho crecieron igual",
+ cit:"Pinto et al., 2025 · J Strength Cond Res 39(5):523-530",tipo:"Ensayo controlado",
+ comp:"1 frente a 3 series de aperturas en máquina",
+ pob:"15 hombres jóvenes principiantes · 12 semanas.",
+ res:["clavicular (1S = 17%; 3S = 18%) and sternocostal (1S = 21%; 3S = 21%) thicknesses"],
+ lim:"15 personas; un solo ejercicio.",
+ uso:"FICHA 001 Pecho",doi:"10.1519/JSC.0000000000005045",pmid:"40266636"},
+{s:"sel",g:"MEDIDO",c:"Glúteo: la patada (extensión de cadera) creció más abajo; la abducción, más arriba",
+ cit:"Attarieh et al., 2026 · J Strength Cond Res (en línea 7 oct 2026)",tipo:"Ensayo intrasujeto",
+ comp:"Extensión de cadera frente a abducción de cadera",
+ pob:"17 adultos jóvenes · 10 semanas.",
+ res:["HExt produced greater gains (9 vs. 5%) and a distal-dominant growth pattern","while HAbd produced a proximal-dominant pattern (proximal: 10%, middle: 4%, distal: 1%)."],
+ lim:"17 personas; primer estudio de este tipo; puede cambiar en la versión final.",
+ uso:"FICHA 008 Glúteo",doi:"10.1519/JSC.0000000000005701",pmid:"42842490"},
+{s:"sel",g:"DA IGUAL",c:"Hip thrust y sentadilla: el glúteo creció parecido",
+ cit:"Plotkin et al., 2023 · Front Physiol 14:1279170",tipo:"Ensayo aleatorizado",
+ comp:"Hip thrust frente a sentadilla",
+ pob:"34 universitarios principiantes (18 y 16) · 9 semanas.",
+ res:["Gluteus mCSA increases were similar across both groups."],
+ lim:"Principiantes. La sentadilla hizo crecer más cuádriceps y aductores.",
+ uso:"FICHA 008 Glúteo",doi:"10.3389/fphys.2023.1279170",pmid:"37877099"},
+{s:"sel",g:"MEDIDO",c:"Variar ejercicios con criterio anatómico ayuda; cambiarlos al azar, no",
+ cit:"Kassiano et al., 2022 · J Strength Cond Res 36(6):1753-1762",tipo:"Revisión sistemática",
+ comp:"Variar ejercicios frente a no variarlos",
+ pob:"8 estudios, 241 hombres jóvenes.",
+ res:["Some degree of systematic variation seems to enhance regional hypertrophic adaptations and maximize dynamic strength, whereas excessive, random variation may compromise muscular gains."],
+ lim:"Estudios pequeños; solo hombres jóvenes.",
+ uso:"Pilar «Culturismo de primer nivel»",doi:"10.1519/JSC.0000000000004258",pmid:"35438660"},
+// ---------- EMG y foco ----------
+{s:"emg",g:"ANATOMÍA",c:"Que un ejercicio «active más» en el EMG no demuestra que haga crecer más",
+ cit:"Vigotsky et al., 2022 · Sports Med 52(2):193-199",tipo:"Revisión crítica",
+ comp:"EMG de una sesión como predictor del crecimiento",
+ pob:"Revisión de la evidencia.",
+ res:["Given the limited evidence validating the amplitude of surface electromyograms as a predictor of longitudinal hypertrophic adaptations"],
+ lim:"Es una revisión argumentada, no un metaanálisis.",
+ uso:"FICHA 008 Glúteo · destacada «Estudios»",doi:"10.1007/s40279-021-01619-2",pmid:"35006527"},
+{s:"emg",g:"MEDIDO",c:"El hip thrust gana en EMG frente a la sentadilla…",
+ cit:"Contreras et al., 2015 · J Appl Biomech 31(6):452-458",tipo:"Estudio agudo (EMG)",
+ comp:"Activación del glúteo en hip thrust frente a sentadilla",
+ pob:"13 mujeres entrenadas · una sesión.",
+ res:["(69.5% vs 29.4%)"],
+ lim:"EMG de una sesión: no mide crecimiento. Mira a Plotkin 2023 (crecieron igual).",
+ uso:"FICHA 008 Glúteo",doi:"10.1123/jab.2014-0301",pmid:"26214739"},
+{s:"emg",g:"MEDIDO",c:"Pensar en el músculo hizo crecer más el bíceps (12,4 % frente a 6,9 %), pero no el cuádriceps",
+ cit:"Schoenfeld et al., 2018 · Eur J Sport Sci 18(5):705-712",tipo:"Ensayo aleatorizado",
+ comp:"Foco en el músculo frente a foco en mover el peso",
+ pob:"30 hombres jóvenes principiantes · 8 semanas.",
+ res:["significantly greater increases in elbow flexor thickness in INTERNAL versus EXTERNAL (12.4% vs. 6.9%, respectively)","similar changes were noted in quadriceps thickness"],
+ lim:"Un estudio pequeño, principiantes, solo hombres. Funcionó en el curl, no en la pierna.",
+ uso:"Formato Diagnóstico",doi:"10.1080/17461391.2018.1447020",pmid:"29533715"},
+{s:"emg",g:"MEDIDO",c:"Press de banca: pensar en el pecho sube su activación con 20-60 % del máximo, no al 80 %",
+ cit:"Calatayud et al., 2016 · Eur J Appl Physiol 116(3):527-533",tipo:"Estudio agudo (EMG)",
+ comp:"Foco en pectoral o tríceps a distintas cargas",
+ pob:"18 hombres entrenados · una sesión.",
+ res:["at relative loads between 20 and 60 %","A threshold between 60 and 80 % appeared to exist."],
+ lim:"EMG, no crecimiento.",
+ uso:"Formato Diagnóstico",doi:"10.1007/s00421-015-3305-7",pmid:"26700744"},
+{s:"emg",g:"MEDIDO",c:"Flexiones: enfocarse en el pectoral subió su activación un 9 %",
+ cit:"Calatayud et al., 2017 · Eur J Appl Physiol 117(7):1445-1452",tipo:"Estudio agudo (EMG)",
+ comp:"Flexiones con y sin foco en el pectoral",
+ pob:"18 hombres entrenados.",
+ res:["Focusing on using pectoralis major increased activity in this muscle by 9% nEMG (95% CI 5-13; Cohen's d 0.60)"],
+ lim:"EMG, no crecimiento.",
+ uso:"Formato Diagnóstico",doi:"10.1007/s00421-017-3637-6",pmid:"28500415"},
+// ---------- Anatomía ----------
+{s:"ana",g:"ANATOMÍA",c:"Pectoral: la parte clavicular sube el brazo al frente; la esternal y la costal lo acercan y lo bajan",
+ cit:"Ackland et al., 2008 · J Anat 213(4):383-390",tipo:"Estudio en cadáver (brazos de momento)",
+ comp:"Función de cada porción del pectoral",
+ pob:"8 extremidades superiores de cadáver.",
+ res:["In flexion, the superior pectoralis major (clavicular fibers) … were the most effective flexors","the middle and inferior sub-regions tended to behave as a stabilizer and extensor, respectively."],
+ lim:"Es función, no prueba de que un ejercicio haga crecer más una porción.",
+ uso:"FICHA 001 Pecho · destacada «Estudios»",doi:"10.1111/j.1469-7580.2008.00965.x",pmid:"18691376"},
+{s:"ana",g:"ANATOMÍA",c:"El dorsal ancho baja el brazo y lo acerca al cuerpo (aduce y extiende el hombro)",
+ cit:"Hik y Ackland, 2019 · J Anat 234(1):1-15",tipo:"Revisión sistemática (brazos de momento)",
+ comp:"Palancas de los músculos del hombro",
+ pob:"Revisión de estudios anatómicos.",
+ res:["with each of these muscles exhibiting prominent leverage in shoulder adduction,","and the latissimus dorsi and teres major also in extension."],
+ lim:"Anatomía: no dice qué jalón hace crecer más.",
+ uso:"FICHA 003 Dorsal",doi:"10.1111/joa.12903",pmid:"30411350"},
+{s:"ana",g:"DA IGUAL",c:"Jalón: el ancho del agarre no cambió la activación del dorsal",
+ cit:"Andersen et al., 2014 · J Strength Cond Res 28(4):1135-1142",tipo:"Estudio agudo (EMG y fuerza)",
+ comp:"Agarre estrecho, medio y ancho",
+ pob:"15 hombres · 6RM.",
+ res:["There was similar EMG activation between grip widths for latissimus, trapezius, or infraspinatus"],
+ lim:"EMG de una sesión. No hay estudios que midan qué agarre hace crecer más el dorsal.",
+ uso:"FICHA 003 Dorsal",doi:"10.1097/JSC.0000000000000232",pmid:"24662157"},
+{s:"ana",g:"ANATOMÍA",c:"Deltoides: el posterior lleva el brazo atrás; el medio eleva bien en el plano escapular y en el lateral",
+ cit:"Kuechle et al., 1997 · J Shoulder Elbow Surg 6(5):429-439",tipo:"Estudio biomecánico (brazos de momento)",
+ comp:"Palancas del hombro en distintos planos",
+ pob:"Estudio anatómico.",
+ res:["the posterior deltoid and infraspinatus have the largest horizontal extension moment arms in this plane.","the midportion is greater"],
+ lim:"Anatomía. No hay estudio que diga que el plano escapular hace crecer más.",
+ uso:"FICHAS de deltoides (mes 2)",doi:"10.1016/s1058-2746(97)70049-1",pmid:"9356931"},
+{s:"ana",g:"ANATOMÍA",c:"En los músculos peniformes las fibras no van en la línea de tracción",
+ cit:"Azizi, Brainerd y Roberts, 2008 · Proc Natl Acad Sci USA 105(5):1745-1750",tipo:"Estudio de fisiología muscular",
+ comp:"Orientación de las fibras durante la contracción",
+ pob:"Estudio experimental.",
+ res:["In pennate muscles, fibers are oriented at an angle to the muscle's line of action and rotate as they shorten,"],
+ lim:"Por eso «alinear la carga con las fibras» no es una instrucción bien definida: no hay estudio que lo pruebe.",
+ uso:"Serie FICHA (marco «función · estiramiento · carga»)",doi:"10.1073/pnas.0709212105",pmid:"18230734"},
+// ---------- Nutrición ----------
+{s:"nut",g:"MEDIDO",c:"Por encima de unos 1,6 g de proteína por kilo al día no hubo más masa magra (en promedio)",
+ cit:"Morton et al., 2018 · Br J Sports Med 52(6):376-384",tipo:"Metaanálisis y metarregresión",
+ comp:"Suplemento de proteína con entrenamiento de fuerza",
+ pob:"49 estudios, 1863 adultos sanos sin déficit calórico.",
+ res:["Protein supplementation beyond total protein intakes of 1.62 g/kg/day","resulted in no further RET-induced gains in FFM.","1.62 g protein/kg/day (95% CI: 1.03 to 2.20)"],
+ lim:"Intervalo muy ancho (1,03 a 2,20); los autores sugieren hasta ~2,2 para ir sobre seguro. No vale para fases de definición. Efecto medio del suplemento: +0,30 kg.",
+ uso:"Reel de proteína (3 nov)",doi:"10.1136/bjsports-2017-097608",pmid:"28698222"},
+{s:"nut",g:"MEDIDO",c:"Creatina + entrenamiento: aumento pequeño del grosor muscular (1-1,6 mm)",
+ cit:"Burke et al., 2023 · Nutrients 15(9):2116",tipo:"Metaanálisis bayesiano",
+ comp:"Creatina frente a placebo, con entrenamiento",
+ pob:"10 estudios. El resumen no da el número de participantes.",
+ res:["pooled mean estimate of 0.11","(95% Credible Interval (CrI): -0.02 to 0.25)","upper and lower body muscle thickness (0.10-0.16 cm)"],
+ lim:"Efecto muy pequeño; el intervalo roza el cero.",
+ uso:"Reel de creatina (4 nov)",doi:"10.3390/nu15092116",pmid:"37432300"},
+{s:"nut",g:"MEDIDO",c:"En personas sanas no hay pruebas de daños por creatina monohidrato",
+ cit:"Kreider et al., 2017 · J Int Soc Sports Nutr 14:18",tipo:"Posicionamiento de la ISSN",
+ comp:"Eficacia y seguridad de la creatina",
+ pob:"Revisión de la evidencia (personas sanas).",
+ res:["There is no compelling scientific evidence that the short- or long-term use of creatine monohydrate","(up to 30 g/day for 5 years) has any detrimental effects on otherwise healthy individuals","The only consistently reported side effect … has been weight gain"],
+ lim:"Opinión consensuada de una sociedad de nutrición deportiva. Solo personas sanas: si tienes una enfermedad o tomas medicación, consulta a tu médico.",
+ uso:"Reel de creatina (4 nov)",doi:"10.1186/s12970-017-0173-z",pmid:"28615996"},
+{s:"nut",g:"ANATOMÍA",c:"La creatina no es un esteroide",
+ cit:"Antonio et al., 2021 · J Int Soc Sports Nutr 18(1):13",tipo:"Revisión (ISSN)",
+ comp:"Mitos sobre la creatina",
+ pob:"Revisión de la evidencia.",
+ res:["Creatine is not an anabolic steroid.","because creatine has a completely different chemical structure"],
+ lim:"Lo del riñón vale para personas sanas. Sobre el pelo dice «la mayoría de la evidencia», no «nunca».",
+ uso:"Reel de creatina (4 nov)",doi:"10.1186/s12970-021-00412-w",pmid:"33557850"},
+{s:"nut",g:"DA IGUAL",c:"Si ya comiste y haces hasta ~10 series por músculo, más carbohidratos no suelen mejorar el rendimiento",
+ cit:"Henselmans et al., 2022 · Nutrients 14(4):856",tipo:"Revisión sistemática",
+ comp:"Más frente a menos carbohidratos",
+ pob:"49 estudios, sobre todo con entrenados.",
+ res:["in workouts consisting of up to 10 sets per muscle group.","primarily in those with fasted control groups","and workouts with over 10 sets per muscle group."],
+ lim:"Sin metaanálisis. Pueden ayudar si entrenas en ayunas o con mucho volumen.",
+ uso:"Formato Diagnóstico",doi:"10.3390/nu14040856",pmid:"35215506"},
+// ---------- Sueño e hidratación ----------
+{s:"rec",g:"MEDIDO",c:"Dormir poco baja el rendimiento (~7,6 % de media) y más cuantas más horas llevas despierto",
+ cit:"Craven et al., 2022 · Sports Med 52(11):2669-2690",tipo:"Metaanálisis",
+ comp:"Rendimiento tras perder sueño una noche",
+ pob:"959 participantes (89 % hombres).",
+ res:["mean %Δ = - 7.56%, 95% CI - 11.9 to - 3.13","(~ 0.4% decrease for every hour awake prior to exercise)","tasks performed in the AM were largely unaffected"],
+ lim:"Promedio de todo tipo de ejercicio, no solo fuerza. Pérdida aguda, no sueño crónico.",
+ uso:"Formato Diagnóstico",doi:"10.1007/s40279-022-01706-y",pmid:"35708888"},
+{s:"rec",g:"MEDIDO",c:"Privarse de sueño baja la fuerza máxima (efecto pequeño) y más la potencia",
+ cit:"Kong et al., 2025 · Front Physiol 16:1544286",tipo:"Metaanálisis",
+ comp:"Con y sin privación de sueño",
+ pob:"45 estudios, deportistas y no deportistas.",
+ res:["MF [SMD = -0.35; 95% CI (-0.56, -0.14); P = 0.001]","EP [SMD = -0.63; 95% CI (-0.94, -0.33); P < 0.00001]"],
+ lim:"Privación aguda; en fuerza máxima el efecto es pequeño.",
+ uso:"Formato Diagnóstico",doi:"10.3389/fphys.2025.1544286",pmid:"40236824"},
+{s:"rec",g:"MEDIDO",c:"Ir deshidratado bajó la fuerza un 5,5 % y la resistencia muscular un 8,3 %",
+ cit:"Savoie et al., 2015 · Sports Med 45(8):1207-1227",tipo:"Metaanálisis",
+ comp:"Hidratado frente a deshidratado",
+ pob:"28 trabajos.",
+ res:["Hypohydration impaired overall muscle endurance by 8.3 ± 2.3% (P < 0.05)","muscle strength fell by 5.5 ± 1.0% (P < 0.05) with hypohydration"],
+ lim:"No dice a partir de qué % de peso perdido ocurre.",
+ uso:"Formato Diagnóstico",doi:"10.1007/s40279-015-0349-0",pmid:"26178327"},
+{s:"rec",g:"MEDIDO",c:"Deshidratado: algo menos de fuerza (~2 %) y bastante menos aguante en esfuerzos intensos (~10 %)",
+ cit:"Judelson et al., 2007 · Sports Med 37(10):907-921",tipo:"Revisión narrativa",
+ comp:"Efecto de la hipohidratación",
+ pob:"Revisión de estudios previos.",
+ res:["attenuate strength (by approximately 2%), power (by approximately 3%)","high-intensity endurance (by approximately 10%)"],
+ lim:"Revisión narrativa; sus cifras difieren de Savoie 2015.",
+ uso:"Formato Diagnóstico",doi:"10.2165/00007256-200737100-00006",pmid:"17887814"},
+{s:"rec",g:"ANATOMÍA",c:"Referencia: no perder más del 2 % del peso en agua; pesarse antes y después estima el sudor",
+ cit:"ACSM (Sawka et al.), 2007 · Med Sci Sports Exerc 39(2):377-390",tipo:"Posicionamiento",
+ comp:"Recomendaciones de hidratación",
+ pob:"Personas que hacen ejercicio.",
+ res:["prevent excessive (>2% body weight loss from water deficit) dehydration","Individual sweat rates can be estimated by measuring body weight before and after exercise."],
+ lim:"El 2 % es una recomendación, no un umbral demostrado de pérdida de fuerza.",
+ uso:"Formato Diagnóstico",doi:"10.1249/mss.0b013e31802ca597",pmid:"17277604"},
+{s:"rec",g:"MEDIDO",c:"El cambio de peso y la sed predicen la deshidratación mejor que el color de la orina",
+ cit:"Adams et al., 2024 · Med Sci Sports Exerc 56(12):2404-2412",tipo:"Estudio experimental",
+ comp:"Peso, color de la orina y sed",
+ pob:"93 adultos jóvenes.",
+ res:["changes in body mass (58%) and thirst perception (26%) were the most influential predictors of dehydration"],
+ lim:"No es diagnóstico. Una sola muestra de orina puede engañar (Cheuvront et al., 2015).",
+ uso:"Formato Diagnóstico",doi:"10.1249/MSS.0000000000003514",pmid:"38967358"}
+];
+
+
+const norm = (t) => t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+const sealCls = (g) => "s-" + norm(g).replace(/\s/g, "").toUpperCase();
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const SEALS = { "MEDIDO": "Medido", "ANATOMÍA": "Anatomía", "DA IGUAL": "Da igual" };
+const state = { s: "", g: "", q: "" };
+const $ = (id) => document.getElementById(id);
+
+function card(d) {
+  const [autor, revista] = d.cit.split(" · ");
+  const link = d.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${d.pmid}/` : `https://doi.org/${d.doi}`;
+  return `<details><summary><span class="claim">${esc(d.c)}</span><span class="who">${esc(autor)}, ${esc(d.tipo.charAt(0).toLowerCase() + d.tipo.slice(1))}</span><span class="seal ${sealCls(d.g)}">${SEALS[d.g]}</span></summary>
+<div class="ev"><div class="quotes">${d.res.map((r) => `<p>“${esc(r)}”</p>`).join("")}</div>
+<dl><dt>Comparó</dt><dd>${esc(d.comp)}</dd>
+<dt>En quién</dt><dd>${esc(d.pob)}</dd>
+<dt>Qué no demuestra</dt><dd>${esc(d.lim)}</dd>
+<dt>Dónde lo uso</dt><dd>${esc(d.uso)}</dd>
+<dt>Publicado en</dt><dd>${esc(revista || "")}</dd>
+<dt>Original</dt><dd><a href="${link}" target="_blank" rel="noopener">${d.pmid ? "PubMed " + d.pmid : "doi.org"}</a> (DOI ${esc(d.doi)})</dd></dl></div></details>`;
+}
+function match(d, ignore) {
+  const q = norm(state.q.trim());
+  return (ignore === "s" || !state.s || d.s === state.s) && (ignore === "g" || !state.g || d.g === state.g) &&
+    (!q || norm([d.c, d.cit, d.comp, d.pob, d.uso, S[d.s]].join(" ")).includes(q));
+}
+function render() {
+  const forSec = D.filter((d) => match(d, "s"));
+  $("secs").innerHTML = [["", "Todo"], ...Object.entries(S)].map(([v, l]) => {
+    const n = v ? forSec.filter((d) => d.s === v).length : forSec.length;
+    return `<button class="f" type="button" data-v="${v}" aria-pressed="${state.s === v}">${l}<span class="n">${n}</span></button>`;
+  }).join("");
+  $("sels").innerHTML = Object.entries(SEALS).map(([v, l]) => `<button class="seal ${sealCls(v)}" type="button" data-v="${v}" aria-pressed="${state.g === v}">${l}</button>`).join("");
+  const rows = D.filter((d) => match(d));
+  let html = "";
+  for (const k of Object.keys(S)) {
+    const r = rows.filter((d) => d.s === k);
+    if (r.length) html += `<section><h2>${S[k]}<small>${r.length} ${r.length === 1 ? "estudio" : "estudios"}</small></h2>${r.map(card).join("")}</section>`;
+  }
+  $("list").innerHTML = html || `<p class="empty">Nada con esos filtros. <button type="button" id="reset">Ver toda la biblioteca</button></p>`;
+}
+$("secs").onclick = (e) => { const b = e.target.closest("button"); if (b) { state.s = b.dataset.v; render(); } };
+$("sels").onclick = (e) => { const b = e.target.closest("button"); if (b) { state.g = state.g === b.dataset.v ? "" : b.dataset.v; render(); } };
+$("list").onclick = (e) => { if (e.target.id === "reset") { state.s = state.g = state.q = ""; $("q").value = ""; render(); } };
+$("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+render();
+</script>
+<script>
+/* ===== Fondo: espiral de Fibonacci tras el logo y figuras poligonales generadas por recursión que avanzan con pulso ===== */
+(function(){
+  const rm = matchMedia('(prefers-reduced-motion: reduce)').matches, cv = document.getElementById('bgfx'), x = cv.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2);
+  const GA = Math.PI * (3 - Math.sqrt(5)), PHI = (1 + Math.sqrt(5)) / 2, rnd = (a, b) => a + Math.random() * (b - a);
+  let W, H, items = [];
+  const poly = (g, cx, cy, n, r, rot) => { g.beginPath(); for (let i = 0; i <= n; i++) { const a = rot + i * Math.PI * 2 / n; i ? g.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r) : g.moveTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); } g.stroke(); };
+  const kinds = {
+    hexaflake: (R) => { let c = [[0, 0, R]]; const o = []; for (let l = 0; l < 3; l++) { o.push(c.map(([a, b, r]) => [a, b, 6, r, 0])); const n = [];
+      c.forEach(([a, b, r]) => { n.push([a, b, r / 3]); for (let i = 0; i < 6; i++) { const t = i * Math.PI / 3; n.push([a + Math.cos(t) * r * 2 / 3, b + Math.sin(t) * r * 2 / 3, r / 3]); } }); c = n; } return o; },
+    sierpinski: (R) => { let c = [[0, R * .12, R]]; const o = []; for (let l = 0; l < 5; l++) { o.push(c.map(([a, b, r]) => [a, b, 3, r, -Math.PI / 2])); const n = [];
+      c.forEach(([a, b, r]) => { for (let i = 0; i < 3; i++) { const t = -Math.PI / 2 + i * Math.PI * 2 / 3; n.push([a + Math.cos(t) * r / 2, b + Math.sin(t) * r / 2, r / 2]); } }); c = n; } return o; },
+    whirl4: (R) => { const th = .22, s = 1 / (Math.sin(th) + Math.cos(th)), o = [[], [], [], []]; let r = R; for (let i = 0; i < 18; i++) { o[i % 4].push([0, 0, 4, r, Math.PI / 4 + i * th]); r *= s; } return o; },
+    whirl6: (R) => { const o = [[], [], []]; let r = R; for (let i = 0; i < 15; i++) { o[i % 3].push([0, 0, 6, r, i * (Math.PI * 2 / PHI / PHI) * .25]); r /= Math.pow(PHI, .25); } return o; } };
+  const KN = Object.keys(kinds);
+  const fractal = (R) => kinds[KN[Math.floor(Math.random() * KN.length)]](R).map((ps, li) => { const s = Math.ceil(R * 2 + 6), c = document.createElement('canvas'); c.width = c.height = s * dpr;
+    const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, s / 2 * dpr, s / 2 * dpr); g.strokeStyle = '#fff'; g.lineWidth = li ? .8 : 1; ps.forEach(p => poly(g, ...p)); return c; });
+  const spawn = (fresh) => { const z = rnd(.25, 1), R = rnd(16, 46) * (.6 + z); return { lv: fractal(R), R, z, x: fresh ? rnd(0, W) : W + R * 2, y: rnd(0, H), a: rnd(0, 6.28), va: rnd(-.22, .22), vx: -rnd(8, 22) * z, ph: Math.floor(rnd(0, 6)) }; };
+  const size = () => { W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; x.setTransform(dpr, 0, 0, dpr, 0, 0); items = Array.from({ length: W < 700 ? 9 : 16 }, () => spawn(true)); };
+  size(); addEventListener('resize', size);
+  let prev = performance.now();
+  const draw = (now) => { const dt = Math.min(.05, (now - prev) / 1000), t = now / 1000; prev = now; const beat = Math.max(0, 1 - ((t * 1.6) % 1) * 3), step = Math.floor(t * 1.6);
+    x.clearRect(0, 0, W, H);
+    const cx = W * (W < 700 ? .85 : .82), cy = 150 - scrollY * .3, Rm = Math.min(W, 560) * .62, N = 377, k = Rm / Math.sqrt(N), rot = t * .07 + scrollY * .0015, fade = Math.max(0, 1 - scrollY / (H * .8)) * .8;
+    if (fade > 0) { const px = new Float32Array(N * 2);
+      for (let i = 0; i < N; i++) { const rr = k * Math.sqrt(i + 1) * (1 + beat * .012), a = i * GA + rot; px[i * 2] = cx + Math.cos(a) * rr; px[i * 2 + 1] = cy + Math.sin(a) * rr; }
+      x.lineWidth = 1; for (const [s, al] of [[21, .045], [34, .035]]) { x.strokeStyle = `rgba(255,255,255,${al * fade})`; x.beginPath(); for (let i = 0; i + s < N; i++) { x.moveTo(px[i * 2], px[i * 2 + 1]); x.lineTo(px[(i + s) * 2], px[(i + s) * 2 + 1]); } x.stroke(); }
+      for (let i = 0; i < N; i++) { const q = i / N, s = .6 + q * 1.4; x.fillStyle = `rgba(255,255,255,${(.08 + (1 - q) * .22) * fade})`; x.fillRect(px[i * 2] - s / 2, px[i * 2 + 1] - s / 2, s, s); } }
+    for (const f of items) { f.x += f.vx * dt; f.a += f.va * dt; if (f.x < -f.R * 2) Object.assign(f, spawn(false));
+      const yy = ((f.y - scrollY * f.z * .2) % (H + 200) + H + 200) % (H + 200) - 100, sc = 1 + beat * .04 * f.z, act = (step + f.ph) % f.lv.length;
+      x.save(); x.translate(f.x, yy); x.rotate(f.a); x.scale(sc, sc);
+      f.lv.forEach((img, li) => { x.globalAlpha = (.04 + f.z * .08) * (li === act ? 1.6 + beat * 1.4 : 1); const s = img.width / dpr; x.drawImage(img, -s / 2, -s / 2, s, s); }); x.restore(); }
+    x.globalAlpha = 1; if (!rm) requestAnimationFrame(draw); };
+  requestAnimationFrame(draw);
+
+})();
+</script>
+</body>
+</html>
