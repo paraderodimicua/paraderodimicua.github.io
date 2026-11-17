@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /descargar/
+Disallow: /coach/
+
+Sitemap: https://paraderodimicua.github.io/sitemap.xml
